@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'HomepageController@index') ;
+Route::get('/location', 'LocationController@index') ;
+// Route::get('/portfolio', 'PortfolioController@index') ;
+// Route::get('/contact', 'ContactController@index') ;
+
+// Route::get('/form', 'FormController@index') ;
+// Route::get('/form/create', 'FormController@create') ;
+// Route::post('/form', 'FormController@store') ;
