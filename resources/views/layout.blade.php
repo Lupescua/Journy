@@ -22,58 +22,46 @@
 
 <body>
 
+    <div class="pos-f-t d-flex p-2 panel-transparent sticky-top sticky sticky scrollable exploring stuck">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <span class="navbar-toggler-icon " href="#">
-            <img src="http://www.ryanhamilton.ca/Logos/logo_18.jpg" width="30" height="30" alt="Logo">
-        </span>
-        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="container navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-around pos-f-t panel-transparent sticky-top ">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto navbar-brand">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-
-            </ul>
-
-            <form class="form-inline ">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-            <div class="nav-item dropdown my-2 my-lg-0">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <span class="navbar-toggler-icon " href="#">
-                        <img src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" width="30" height="30" alt="User_face">
-                    </span>
-
+                <a class="mr-auto " href="{{action('HomepageController@index')}}">
+                    <img src="http://www.ryanhamilton.ca/Logos/logo_18.jpg" width="30" height="30" alt="Logo">
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+
+
+                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="nav-item dropdown my-2 my-lg-0">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span class="navbar-toggler-icon" href="#" style="background-image: url('https://www.atomix.com.au/media/2015/06/atomix_user31.png'); width: 30px; height: 30px;">
+                        </span>
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left:-10vw">
+                        <a class="dropdown-item active" href="#">Log in / Sign up</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Log out</a>
+                    </div>
+
                 </div>
+
             </div>
-        </div>
-    </nav>
+        </nav>
+
+    </div>
 
     <!-- I'd like this button, when it gets pushed to go to the Home page. It's set now to go to Location, just to test it. it does not seem to work -->
-    <div class="container navbar">
+    <div class="container navbar d-none">
         <div class="pos-f-t panel-transparent sticky-top sticky sticky scrollable exploring stuck">
             <div class="collapse" id="navbaractor">
                 <div class="p-4 text-left">
@@ -97,8 +85,6 @@
                 </button>
             </nav>
         </div>
-
-
     </div>
 
 
