@@ -1,0 +1,202 @@
+@import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
+body {
+  background: #77adbe;
+  margin: 0;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 16px;
+}
+#app {
+  max-width: 100%;
+  margin: 0px auto;
+  background: url('./../images/hero.jpg') no-repeat;
+  background-size: cover;
+  min-height: 110vh;
+  padding-bottom: 25px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  padding:20px;
+  height: 100px;
+}
+
+/*.navbar img {
+  height: 99px;
+  width: 100px;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+}*/
+.logo {
+  float: left;
+}
+.login-signup {
+  float: right;
+  padding: 20px 0;
+}
+.navbar a {
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #4a4a4a;
+}
+.navbar a:hover {
+  color: #466bcb;
+}
+.suggestion-list {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  width: 500px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #4CAF50;
+}
+.suggestion-list-entry {
+  margin-bottom: 10px;
+}
+.suggestion-list-entry a {
+  text-decoration: none;
+}
+
+.image-list-entry {
+  font-size: 16px;
+  padding: 20px;
+  margin: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.forecast {
+  position: absolute;
+  left: 205px;
+  top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  padding: 10px;
+  border: 1px solid #4CAF50;
+}
+.image-list-entry-title {
+  font-weight: bold;
+}
+
+.image-list-entry-title:hover {
+  color: #77adbe;
+  cursor: pointer;
+}
+
+.image-list-entry-detail {
+  font-size: 12px;
+  color: #999;
+}
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+form h1 {
+  color: #4a4a4a;
+}
+input[type=text], select {
+    width: 34%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+
+.hero-form {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  width: 50%;
+  padding: 20px 0;
+  border: 1px solid #4CAF50;
+}
+
+.hero-form h1 {
+  color: #fff;
+}
+
+.hero-form .hero-input {
+  width: 60%;
+}
+
+.friend-list {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #4CAF50;;
+  position: absolute;
+  right: 40px;
+  top: 425px;
+}
+
+.friends-name,
+.friend-list .name {
+  text-transform: capitalize;
+}
+
+.delete {
+  position: absolute;
+  right: 10px;
+  color: #ff1515;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.form-wrapper {
+  position: absolute;
+  width: 500px;
+  left: 580px;
+  top: 425px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  border: 1px solid #4CAF50;;
+  border-radius: 5px;
+  padding-bottom: 25px;
+}
+
+.form-wrapper input[type=text] {
+  width: 60%;
+}
+
+.friend-li {
+  margin-bottom: 10px;
+}
+
+.add-friend-btn, .comment-input {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.form-wrapper .comment-input {
+  width: 80% !important;
+}
+
+.add-friend-btn {
+  width: 25% !important;
+}

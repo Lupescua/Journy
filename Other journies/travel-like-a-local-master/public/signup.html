@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Team Loco - Travel like a local App</title>
+	<link href="./styles/login-style.css" type="text/css" rel="stylesheet" />
+	<link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+	<div class="login-body">
+		<div class="login-wrap">
+			<form action="/signup" method="post">
+				<div>
+					<div>
+						<div class="logo">
+							<img src="./images/logo.png" alt="">
+						</div>
+						<div class="login-text-wrap">
+							<h2>SIGN UP</h2>
+							<div class="input-wrap">
+								<label><b>Username</b></label>
+								<input type="text" placeholder="Enter Username" name="username" required>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="input-wrap">
+							<label><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="password" required>
+						</div>
+					</div>
+					<div>
+						<input class="login-btn" type="submit" value="Login">
+						<div class="signup-link">
+							<span>or </span><a href="login.html">Log In</a>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="overlay1">
+			<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" autoplay loop>
+				<source src="./images/heroVid.mp4" type="video/webm">
+				<source src="./images/heroVid.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+</body>
+
+<script>
+  var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+document.querySelector('video').playbackRate = 0.6;
+
+
+
+
+
+</script>
+
+<!--<body>
+	<form action="/signup" method="post">
+		<div>
+			<div>
+				<p>SIGNUP FORM</p>
+				<label><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="username" required>
+			</div>
+			<div>
+				<label><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="password" required>
+			</div>
+			<div>
+				<input type="submit" value="Sign Up">
+			</div>
+		</div>
+	</form>
+</body>-->
+
+</html>

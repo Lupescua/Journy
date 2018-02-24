@@ -1,0 +1,104 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  text-align: center;
+}
+
+.login-body {
+  display: relative;
+  display: inline-block;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -10px;;
+  width: 30%;
+  background-color: #fff;
+  display: inline-block;
+  z-index: 100;
+  padding-top: 100px;
+}
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+    opacity: 0.8;
+}
+
+.overlay {
+    background: url('./../images/signup.jpg') no-repeat;
+    z-index: 2;
+    background-size: cover;
+    width: 70%;
+    margin-left: 30%;
+    min-height: 100vh;
+}
+
+.overlay1 {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: green;
+    z-index:4;
+    opacity: 1;
+}
+
+.login-btn {
+  display: block;
+  width: 200px;
+  text-align: center;
+  height: 50px;
+  background-color: green;
+  outline: none;
+  border: 0;
+  font-size: 20px;
+  color: #fff;
+  margin: 20px auto;
+}
+
+.login-text-wrap h2 {
+  text-align: center;
+}
+
+.signup-link {
+  text-align: center;
+}
+
+.input-wrap {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-wrap label {
+  display: block;
+  left: -65px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.input-wrap input {
+  width: 196px;
+  height: 30px;
+  border: 1px solid #4CAF50;
+  padding-left: 10px;
+  color: #ccc;
+  font-size: 16px;
+}

@@ -23,3 +23,5 @@ Route::get('/location', 'LocationController@index') ;
 // Route::get('/form', 'FormController@index') ;
 // Route::get('/form/create', 'FormController@create') ;
 // Route::post('/form', 'FormController@store') ;
+
+
