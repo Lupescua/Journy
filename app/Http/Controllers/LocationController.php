@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class LocationController extends Controller
 {
     public function index(){
-        return view('welcome');
+        return view('location');
     }
 }
