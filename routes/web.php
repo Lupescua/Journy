@@ -18,6 +18,8 @@
 Route::get('/', 'HomepageController@index') ;
 Route::get('/location', 'LocationController@index') ;
 Route::get('/login', 'LoginController@index') ;
+
+
 // Route::get('/portfolio', 'PortfolioController@index') ;
 // Route::get('/contact', 'ContactController@index') ;
 
