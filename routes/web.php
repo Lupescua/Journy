@@ -22,9 +22,7 @@ Route::get('/login', 'LoginController@index') ;
 
 // Route::get('/portfolio', 'PortfolioController@index') ;
 // Route::get('/contact', 'ContactController@index') ;
+Route::get('/experience', 'ExperienceController@index') ;
 
-// Route::get('/form', 'FormController@index') ;
-// Route::get('/form/create', 'FormController@create') ;
-// Route::post('/form', 'FormController@store') ;
 
 
