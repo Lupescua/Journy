@@ -1,3 +1,14 @@
+@extends('layout')
+@section('title')
+Journy
+@endsection
+
+
+@section('content')
+
+@endsection
+
+
 <!doctype html>
 <html lang="en">
 
@@ -16,9 +27,6 @@
         .panel-transparent {
             background: none !important;
         }
-        .dropdown-item:hover {
-  text-decoration: none;
-}
     </style>
 </head>
 
@@ -79,3 +87,5 @@
 </body>
 
 </html>
+
+@endsection
