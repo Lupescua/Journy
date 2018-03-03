@@ -22,3 +22,8 @@ Route::get('/experience', 'ExperienceController@index') ;
 
 
 
+
+Auth::routes();
+
+Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+Route::get('/callback', 'SocialAuthFacebookController@callback');
