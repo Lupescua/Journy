@@ -7,14 +7,14 @@ Journy-login
 
 @section('content')
 
-    <div class="jumbotron jumbotron-fluid ">
+    <div class="jumbotron ">
         <div class="transbox">
             <div class="column">
                 <form>
-                    <div class="col-md-8 col-md-offset-4">
-                        <a href="{{url('/redirect')}}"><img src="/img/rsz_fb.png" alt="facebook login" height="70"></a>
-
-                        <!-- <img src="/img/google.png" alt="google login" height="70"> -->
+                    <div class="center">
+                        <a href="{{url('/redirect')}}"><img src="/img/fb.png" alt="facebook login" height="70rem"></a>
+                        <br><br>
+                        <img src="/img/google.png" alt="google login" height="71rem">
                     </div>
                 </div>
             </form>

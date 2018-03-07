@@ -11,4 +11,13 @@
         justify-content: center;
     }
 
-    
+    .jumbotron .transbox {
+        margin: 30px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.541);
+        border-radius: 3px;
+    }
+
+    .center {
+        margin: 0 auto;
+    }
