@@ -1,7 +1,5 @@
 
-     body {
-        background-color: aquamarine
-    }
+
 
     .jumbotron {
         background: url('/img/apple.jpg');
@@ -12,3 +10,5 @@
         display: flex;
         justify-content: center;
     }
+
+    
