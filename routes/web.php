@@ -14,10 +14,11 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Auth::routes();
 
-Route::get('/', 'HomepageController@index') ;
+Route::get('/', 'HomepageController@index')  ;
 Route::get('/location', 'LocationController@index') ;
-Route::get('/login', 'LoginController@index') ;
+Route::get('/login', 'LoginController@index')->name('login') ;
 Route::get('/experience', 'ExperienceController@index') ;
 
 

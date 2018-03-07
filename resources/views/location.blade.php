@@ -6,7 +6,7 @@ Journy
 
 @section('content')
 
-@endsection
+
 
 
 <!doctype html>
