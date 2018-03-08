@@ -1,4 +1,7 @@
-@extends('layout') @section('title') Journy @endsection @section('content')
+@extends('layout')
+
+@section('title') Journy @endsection
+ @section('content')
 <style>
     .jumbotron {
         background: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');

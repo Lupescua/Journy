@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="breadcrumb">
+	<a href="#">Review guest requirements </a>
+	<a href="#" class="active"> Who is coming </a>
+	<a href="#"> Order Confirmation </a>
+</div>
+<br /><br />
+
+<form action="">
+  <!--  General -->
+  <div class="form-group">
+    <h2 class="heading">Booking & contact</h2>
+    <div class="controls">
+      <input type="text" id="name" class="floatLabel" name="name">
+      <label for="name">Name</label>
+    </div>
+    <div class="controls">
+      <input type="text" id="email" class="floatLabel" name="email">
+      <label for="email">Email</label>
+    </div>
+    <div class="controls">
+      <input type="tel" id="phone" class="floatLabel" name="phone">
+      <label for="phone">Phone</label>
+    </div>
+      <div class="grid">
+        <div class="col-2-3">
+          <div class="controls">
+           <input type="text" id="street" class="floatLabel" name="street">
+           <label for="street">Street</label>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="controls">
+            <input type="number" id="street-number" class="floatLabel" name="street-number">
+            <label for="street-number">Number</label>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-2-3">
+          <div class="controls">
+            <input type="text" id="city" class="floatLabel" name="city">
+            <label for="city">City</label>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="controls">
+            <input type="text" id="post-code" class="floatLabel" name="post-code">
+            <label for="post-code">Post Code</label>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <input type="text" id="country" class="floatLabel" name="country">
+        <label for="country">Country</label>
+      </div>
+  </div>
+
+</body>
+</html>
