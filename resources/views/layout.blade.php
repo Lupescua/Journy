@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/">
                         <span class="navbar-toggler-icon">
                             <img src="http://www.ryanhamilton.ca/Logos/logo_18.jpg" width="60" height="30" alt="Logo">
                     </a>
@@ -59,10 +59,10 @@
                     <img src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" width="30" height="30" alt="Logo">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left:-10vw">
-                    <a class="dropdown-item active" href="#">Log in / Sign up</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item active" href="/login">Log in / Sign up</a>
+                    <a class="dropdown-item" href="/experience">Another action</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Log out</a>
+                    <a class="dropdown-item" href="/">Log out</a>
                 </div>
             </div>
         </div>
