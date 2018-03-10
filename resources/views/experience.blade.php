@@ -28,30 +28,36 @@
         display: flex;
         justify-content: space-between;
     }
-    .short_desc_user{
+
+    .short_desc_user {
         margin: auto;
         display: flex;
         justify-content: space-around;
 
     }
-    .user_pic{
-	width: 18vmin;
-	height: 22vmin;
+
+    .short_desc {
+        height: 22vmin;
+    }
+
+    .user_pic {
+        width: 18vmin;
+        height: 22vmin;
     }
 </style>
 
 <!-- This is the main jumbotron -->
-    <div class="experience_main_picture welconp-3 p-md-5 text-white rounded bg-dark">
-        <div class="col-md-6 px-0">
-            <h1 class="display-4 font-italic">Long is the night we've been waiting for</h1>
-            <!-- <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+<div class="experience_main_picture welconp-3 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+        <h1 class="display-4 font-italic">Long is the night we've been waiting for</h1>
+        <!-- <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
           <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p> -->
-        </div>
     </div>
+</div>
 
 
 <!-- This container contains : Rating, Review Nr, Tags, and Price -->
-    <div class="container">
+<div class="container">
     <div class="row star_review_tags_price">
 
         <!--we need a jquerry to change the stars when giving a new rating-->
@@ -95,12 +101,16 @@
 
     <div class="row short_desc_user">
 
-<div class="col-sm-6 col-md-8">
-            <div class="review">
-            A personal, face-to-face encounter with this awesome animal, is guaranteed to get the adrenaline going! Dive with the sharks in Gaansbaai!
+        <div class="col-sm-6 col-md-8">
+            <div class="short_desc">
 
-Getting into the cage with the sharks around, is truly one of the most breath-taking adventure activities you will ever live to remember. When feeding actively around the boat, the sharks may occasionally brush their tail against the cage, but they NEVER attack the cage. They are very curious though and often come close-up to the cage, to take a closer look at the diver.
-                <a href="#" class="btn btn-default" role="button">&55 people used it</a>
+            <a href="#" class="btn btn-default" role="button">Short description</a>
+                <p>A personal, face-to-face encounter with this awesome animal, is guaranteed to get the adrenaline going! Dive
+                    with the sharks in Gaansbaai! Getting into the cage with the sharks around, is truly one of the most
+                    breath-taking adventure activities you will ever live to remember. When feeding actively around the boat,
+                    the sharks may occasionally brush their tail against the cage, but they NEVER attack the cage. They are
+                    very curious though and often come close-up to the cage, to take a closer look at the diver.
+                </p>
             </div>
         </div>
         <div class="col-sm-6 col-md-2">
@@ -110,6 +120,6 @@ Getting into the cage with the sharks around, is truly one of the most breath-ta
         </div>
 
     </div>
-    </div>
+</div>
 
 @endsection
