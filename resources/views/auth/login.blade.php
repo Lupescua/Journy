@@ -16,8 +16,8 @@ Journy-login
                         <br><br>
                         <img src="/img/google.png" alt="google login" height="71rem">
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 @endsection
