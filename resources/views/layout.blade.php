@@ -165,6 +165,11 @@
         crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
 
+
+<div class="card-footer text-muted">
+    <span class="text-muted">Place footer elements here.</span>
+</div>
+
 </body>
 
 </html>

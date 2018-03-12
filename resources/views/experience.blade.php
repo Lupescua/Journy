@@ -7,9 +7,7 @@
     }
 
     .container {
-        /* width: 100vw; */
-        margin: auto;
-        padding: 0;
+        height: 100%;
     }
 
     .experience_main_picture {
@@ -40,9 +38,46 @@
         height: 22vmin;
     }
 
-    .user_pic {
-        width: 18vmin;
-        height: 22vmin;
+    .short_desc .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .user_pic img {
+        border-radius: 1vmin;
+        height: 5vmin;
+    }
+
+    .video_time {
+        text-align: center;
+        display: table-caption;
+    }
+
+    .video_time video {
+        height: 100%;
+        width: 22vw;
+        z-index: 0;
+        border-radius: 1vmin;
+    }
+
+    .small_title {
+        font-size: 1.4em;
+    }
+
+    .v {
+        top: 60vh;
+        position: absolute;
+        float: right;
+    }
+
+    .calendar_btn,
+    .booking_btn {
+        /* font-size: 1.4rem; */
+        /* line-height: 3rem; */
+        font-weight: 500;
+        margin-top: 1rem;
+        background: #f35738;
+        color: #fff;
     }
 </style>
 
@@ -50,8 +85,6 @@
 <div class="experience_main_picture welconp-3 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
         <h1 class="display-4 font-italic">Long is the night we've been waiting for</h1>
-        <!-- <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
-          <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p> -->
     </div>
 </div>
 
@@ -71,8 +104,9 @@
 
         <!--This number is Jquery, it may come from the database-->
         <div class="col-sm-6 col-md-2">
-            <div class="review">
-                <a href="#" class="btn btn-default" role="button">&55 people used it</a>
+            <div class="people_booked">
+                <a href="#" class="btn btn-default" role="button">55 people used it
+                    <br> Nobody came back</a>
             </div>
         </div>
 
@@ -81,45 +115,373 @@
         <div class="col-sm-6 col-md-4">
             <div class="tags">
                 <p>
-                    <a href="/" class="btn btn-primary" role="button">Tag1</a>
-                    <a href="/" class="btn btn-primary" role="button">Tag2</a>
-                    <a href="/" class="btn btn-primary" role="button">Tag3</a>
+                    <a href="/" class="btn btn-primary" role="button">Dragons</a>
+                    <a href="/" class="btn btn-primary" role="button">Fire</a>
+                    <a href="/" class="btn btn-primary" role="button">Ice</a>
                 </p>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-2">
-            <div class="price">
-                <span>Price</span>
-                <a href="/booking" class="btn btn-default" role="button">USD 22.5</a>
-            </div>
-        </div>
 
     </div>
 
-
-
+    <!-- Desciption and User pics -->
     <div class="row short_desc_user">
 
         <div class="col-sm-6 col-md-8">
             <div class="short_desc">
-
-            <a href="#" class="btn btn-default" role="button">Short description</a>
+                <div class="row">
+                    <a href="#" class="btn btn-default user_pic" role="button">
+                        <img src="http://www.animationxpress.com/wp-content/uploads/2015/11/Jon-Snow.jpg" alt="John Snow profile picture">
+                        <br> Jon Snow</a>
+                    <p>Experience Short description</p>
+                </div>
                 <p>A personal, face-to-face encounter with this awesome animal, is guaranteed to get the adrenaline going! Dive
                     with the sharks in Gaansbaai! Getting into the cage with the sharks around, is truly one of the most
                     breath-taking adventure activities you will ever live to remember. When feeding actively around the boat,
                     the sharks may occasionally brush their tail against the cage, but they NEVER attack the cage. They are
                     very curious though and often come close-up to the cage, to take a closer look at the diver.
                 </p>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-2">
-            <div class="user_pic">
-                <a href="#" class="btn btn-default" role="button">John Snow</a>
+                <hr>
+                <section class="short_details">
+                    <a>
+                        <img src="https://png.icons8.com/metro/1600/marker.png" alt="place marker" height="12" width="12">Praha</a>
+                    <br>
+                    <a>
+                        <img src="https://www.shareicon.net/download/2015/08/10/83156_clock_512x512.png" alt="place marker" height="12" width="12">3.5 hours total</a>
+                    <br>
+                    <a>
+                        <img src="https://cdn4.iconfinder.com/data/icons/user-interface-33/80/Menu-512.png" alt="place marker" height="12" width="12">1 meal, Drinks and Equipment</a>
+                    <br>
+                    <a>
+                        <img src="https://image.flaticon.com/icons/png/512/103/103626.png" alt="place marker" height="12" width="12"> Offered in English</a>
+                    <br>
+                </section>
+                <hr>
+                <section class="host_short_details">
+                    <p class="small_title">About your host, @Jon</p>
+                    <p>We know no king but the King in the North, whose name is Stark.</p>
+                </section>
+                <hr>
+                <section class="activity_short_details">
+                    <p class="small_title">What we’ll do</p>
+                    <p>First, I'll show you around the SKOBA workshop and we'll perform the basics of handmade notebook production.
+                        Then, you will make your own notebook from authentic, locally-sourced materials such as antique Czech
+                        magazines, books and posters. You will experience the joys of making something unique with your own
+                        hands and creating an original notebook in a sustainable and socially-impactful way. And of course,
+                        the notebook is yours to take home and use!</p>
+                </section>
+                <hr>
+                <section class="host_input_short_details">
+                    <p class="small_title">What I’ll provide</p>
+                    <p>Home made cake 󴀁 Home made lemonade 󲀃 Materials for your book 󳀁 Choose from a great variety of old
+                        printed materials relating to Czech history and culture</p>
+                </section>
+                <hr>
+                <section class="restriction_text">
+                    <p class="small_title">Who can come</p>
+                    <p>Guests ages 12 and up can attend.</p>
+                </section>
+                <hr>
+                <section class="restriction_text">
+                    <p class="small_title">Where we’ll be</p>
+                    <p>Mordor is not that far, but this is the land of Fire and Ice. We will be camping in the forests of Mithelhime
+                        and eat with the Trolls unde the bridge of Happyness. Luckylly, our music will be offered by noneother
+                        thatn Tyrion Drake Malfoy and his acompaniament of Jolly Rogers.</p>
+
+                    <div id="map" style="height:400px; background:url('http://www.slate.com/content/dam/slate/blogs/browbeat/2017/09/09/watch_former_mexican_president_vicente_fox_roast_donald_trump/170909_browbeat_fox2.jpg.CROP.promo-xlarge2.jpg')"></div>
+
+                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd1MDV7YL_ruIZgSTk_buouK8KiPXVuVA&callback=initMap"></script>
+                    <script>
+                        function initMap() {
+
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 12,
+                                center: {
+                                    lat: 50.0745,
+                                    lng: 14.431
+                                }
+                            });
+
+                            if (navigator.geolocation) { // we check if the browser supports geolocation
+                                navigator.geolocation.getCurrentPosition(function (location) {
+                                    // stuff to do with the location
+
+                                    console.log(location);
+
+                                    var marker = new google.maps.Marker({
+                                        position: {
+                                            lat: location.coords.latitude,
+                                            lng: location.coords.longitude
+                                        },
+                                        map: map
+                                    });
+
+
+                                }, function (error) {
+                                    // stuff to do with an error
+                                });
+                            }
+
+                        }
+                    </script>
+                </section>
+
+                <hr>
+                <section class="contact_host">
+                    <a class="small_title" href="#">Contact Host</a>
+                </section>
+                <hr>
+
+                <section class="contact_host">
+                    <p class="small_title" >Reviews:</p>
+                </section>
+                <hr>
+
+                <section class="reviews">
+                    <div class="new_review">
+                        <div class="row">
+                            <a href="#" class="btn btn-default user_pic" role="button">
+                                <img src="https://pbs.twimg.com/profile_images/378800000769453762/8fbe7ec07f238b8a91fa3962235c5ef2.jpeg" alt="Cersei Lanister profile picture">
+                                <br>
+                                <p>Cersei Lanister</p>
+                            </a>
+                            <div>
+                                <p class="small_title">I need a dragon instead of my High Sparrow</p>
+                                <p>20/07/2017</p>
+                            </div>
+                        </div>
+                        <p>“Oh, shut up, you little fool. Praying for the gods to have mercy on us all? The gods have no mercy,
+                            that’s why they are gods. My father told me that when he caught me praying. My mother had just
+                            died, you see. I didn’t really understand the concept of death. The finality of it. I thought
+                            if I prayed very very hard, the gods would return her to me. I was four.”</p>
+                    </div>
+                    <hr>
+
+                    <div class="new_review">
+                        <div class="row">
+                            <a href="#" class="btn btn-default user_pic" role="button">
+                                <img src="https://inightswatch.files.wordpress.com/2015/07/tyrion-lannister-profile-pic.jpg" alt="Tyrion Lannister profile picture">
+                                <br>
+                                <p>Tyrion Lannister</p>
+                            </a>
+                            <div>
+                                <p class="small_title">Assuring his dear old dad that he is ready to perform his duty.</p>
+                                <p>21/09/2017</p>
+                            </div>
+
+                        </div>
+                        <p>“Drinking and lust. No man can match me in these things. I am the god of tits and wine… I shall build
+                            a shrine to myself at the next brothel I visit.”</p>
+                    </div>
+                    <hr>
+
+                    <div class="new_review">
+                        <div class="row">
+                            <a href="#" class="btn btn-default user_pic" role="button">
+                                <img src="https://pbs.twimg.com/profile_images/3737825338/2814622f29cded235c07df6ef3fd8f40_400x400.jpeg" alt="Joffrey Lannister profile picture">
+                                <br>
+                                <p>Joffrey Lannister</p>
+                            </a>
+                            <div>
+                                <p class="small_title">Should this be higher or lower?</p>
+                                <p>10/10/2017</p>
+                            </div>
+                        </div>
+                        <p>“My mother wishes me to let Lord Eddard join the Night's Watch. Stripped of all titles and powers,
+                            he would serve the realm in permanent exile. And my Lady Sansa has begged mercy for her father.
+                            But they have the soft hearts of women. So long as I am your king, treason shall never go unpunished.
+                            Sir Ilyn, bring me his head!”</p>
+                    </div>
+                    <hr>
+
+                    <div class="new_review">
+                        <div class="row">
+                            <a href="#" class="btn btn-default user_pic" role="button">
+                                <img src="https://files.brightside.me/files/news/part_18/189705/2888655-_0025_5VIFIEU-650-a542d8629a-1480842238.jpg" alt="Sansa Stark profile picture">
+                                <br>
+                                <p>Sansa Stark</p>
+                            </a>
+                            <div>
+                                <p class="small_title">The snow drifted down and down</p>
+                                <p>20/07/2017</p>
+                            </div>
+                        </div>
+                        <p>“The snow drifted down and down, all in ghostly silence, and lay thick and unbroken on the ground.
+                            It was a place of whites and blacks and greys. White towers and white snow and white statues,
+                            black shadows and black trees, the dark grey sky above. A pure world, Sansa thought. I do not
+                            belong here. Yet she stepped out all the same.” </p>
+                    </div>
+                    <hr>
+                    <div class="new_review">
+
+                        <div class="row">
+                            <a href="#" class="btn btn-default user_pic" role="button">
+                                <img src="https://vignette.wikia.nocookie.net/gameofthrones/images/2/28/Ygritte-promotionals4pic.jpg/revision/latest?cb=20170107042949"
+                                    alt="Ygritte profile picture">
+                                <br>
+                                <p>Ygritte</p>
+                            </a>
+                            <div>
+                                <p class="small_title">to Jon</p>
+                                <p>08/01/2018</p>
+                            </div>
+
+                        </div>
+                        <p>“Do you think I'm as dumb as all those girls in silk dresses you knew growing up? You're loyal and
+                            you're brave. You didn't stop being a crow the day you walked into Mance Rayder's tent. But I'm
+                            your woman now, Jon Snow. You're going to be loyal to your woman. The Night's Watch don't care
+                            if you live or die. Mance Rayder don't care if I live or die. We're just soldiers in their armies
+                            and there's plenty more to carry on if we go down. It's you and me that matters to me and you.
+                            Don't ever betray me. 'Cause I'll cut your pretty cock right off and wear it 'round my neck.”</p>
+                    </div>
+                    <hr>
+
+                </section>
+
             </div>
         </div>
 
+        <div class="col-sm-6 col-md-2 position-relative">
+            <div class="position-fixed v">
+                <div class="video_time">
+                    <div class="video">
+                        <video id="main-video" preload="metadata" poster="http://www.criticalcommons.org/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/thumbnailImage"
+                            height="360" width="630" playsinline autoplay muted loop src="http://videos.criticalcommons.org/transcoded/http/ccserver.usc.edu/8080/cc/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/webm-low/playmobil-game-of-thrones-2012-mp4.webm">
+                            <source type="video/webm" src="http://videos.criticalcommons.org/transcoded/http/ccserver.usc.edu/8080/cc/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/webm-low/playmobil-game-of-thrones-2012-mp4.webm">
+                            <source type="video/mp4" src="http://videos.criticalcommons.org/transcoded/http/ccserver.usc.edu/8080/cc/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/mp4-low/playmobil-game-of-thrones-2012-mp4.mp4">
+                        </video>
+                    </div>
+
+                    <div class="row d-flex justify-content-around">
+                        <div class="price">
+                            <!-- <span></span> -->
+                            <a href="/booking" class="booking_btn btn btn-info" role="button">Book
+                                <br>USD 22.5</a>
+                        </div>
+                        <div class="chose_time">
+                            <!-- This is the button to show the calendar -->
+                            <button class="calendar-toggler calendar_btn btn btn-info" type="button" data-toggle="collapse" data-target="#calendarSupportedContent"
+                                aria-controls="calendarSupportedContent" aria-expanded="false" aria-label="Toggle calendar">Check
+                                <br>the time</button>
+
+                            <!-- This is the calendar -->
+                            <div class="collapse calendar-collapse" id="calendarSupportedContent">
+                                <script language="javascript" type="text/javascript">
+                                    var day_of_week = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+                                    var month_of_year = new Array('January', 'February', 'March', 'April', 'May',
+                                        'June',
+                                        'July',
+                                        'August', 'September', 'October', 'November', 'December');
+
+                                    //  DECLARE AND INITIALIZE VARIABLES
+                                    var Calendar = new Date();
+
+                                    var year = Calendar.getFullYear(); // Returns year
+                                    var month = Calendar.getMonth(); // Returns month (0-11)
+                                    var today = Calendar.getDate(); // Returns day (1-31)
+                                    var weekday = Calendar.getDay(); // Returns day (1-31)
+
+                                    var DAYS_OF_WEEK = 7; // "constant" for number of days in a week
+                                    var DAYS_OF_MONTH = 31; // "constant" for number of days in a month
+                                    var cal; // Used for printing
+
+                                    Calendar.setDate(1); // Start the calendar day at '1'
+                                    Calendar.setMonth(month); // Start the calendar month at now
+
+
+                                    /* VARIABLES FOR FORMATTING
+                                    NOTE: You can format the 'BORDER', 'BGCOLOR', 'CELLPADDING', 'BORDERCOLOR'
+                                          tags to customize your caledanr's look. */
+
+                                    var TR_start = '<TR>';
+                                    var TR_end = '</TR>';
+                                    var highlight_start =
+                                        '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><CENTER>';
+                                    var highlight_end = '</CENTER></TD></TR></TABLE></B>';
+                                    var TD_start = '<TD WIDTH="30"><CENTER>';
+                                    var TD_end = '</CENTER></TD>';
+
+                                    /* BEGIN CODE FOR CALENDAR
+                                    NOTE: You can format the 'BORDER', 'BGCOLOR', 'CELLPADDING', 'BORDERCOLOR'
+                                    tags to customize your calendar's look.*/
+
+                                    cal = '<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 BORDERCOLOR=BBBBBB><TR><TD>';
+                                    cal += '<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2>' + TR_start;
+                                    cal += '<TD COLSPAN="' + DAYS_OF_WEEK + '" BGCOLOR="#EFEFEF"><CENTER><B>';
+                                    cal += month_of_year[month] + '   ' + year + '</B>' + TD_end + TR_end;
+                                    cal += TR_start;
+
+                                    //   DO NOT EDIT BELOW THIS POINT  //
+
+                                    // LOOPS FOR EACH DAY OF WEEK
+                                    for (index = 0; index < DAYS_OF_WEEK; index++) {
+
+                                        // BOLD TODAY'S DAY OF WEEK
+                                        if (weekday == index)
+                                            cal += TD_start + '<B>' + day_of_week[index] + '</B>' + TD_end;
+
+                                        // PRINTS DAY
+                                        else
+                                            cal += TD_start + day_of_week[index] + TD_end;
+                                    }
+
+                                    cal += TD_end + TR_end;
+                                    cal += TR_start;
+
+                                    // FILL IN BLANK GAPS UNTIL TODAY'S DAY
+                                    for (index = 0; index < Calendar.getDay(); index++)
+                                        cal += TD_start + '  ' + TD_end;
+
+                                    // LOOPS FOR EACH DAY IN CALENDAR
+                                    for (index = 0; index < DAYS_OF_MONTH; index++) {
+                                        if (Calendar.getDate() > index) {
+                                            // RETURNS THE NEXT DAY TO PRINT
+                                            week_day = Calendar.getDay();
+
+                                            // START NEW ROW FOR FIRST DAY OF WEEK
+                                            if (week_day == 0)
+                                                cal += TR_start;
+
+                                            if (week_day != DAYS_OF_WEEK) {
+
+                                                // SET VARIABLE INSIDE LOOP FOR INCREMENTING PURPOSES
+                                                var day = Calendar.getDate();
+
+                                                // HIGHLIGHT TODAY'S DATE
+                                                if (today == Calendar.getDate())
+                                                    cal += highlight_start + day + highlight_end + TD_end;
+
+                                                // PRINTS DAY
+                                                else
+                                                    cal += TD_start + day + TD_end;
+                                            }
+
+                                            // END ROW FOR LAST DAY OF WEEK
+                                            if (week_day == DAYS_OF_WEEK)
+                                                cal += TR_end;
+                                        }
+
+                                        // INCREMENTS UNTIL END OF THE MONTH
+                                        Calendar.setDate(Calendar.getDate() + 1);
+
+                                    } // end for loop
+
+                                    cal += '</TD></TR></TABLE></TABLE>';
+
+                                    //  PRINT CALENDAR
+                                    document.write(cal);
+
+                                    //  End -->
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 
 @endsection

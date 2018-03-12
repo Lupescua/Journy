@@ -29,7 +29,7 @@
 </style>
 
 <div class="homepage_top_image jumbotron-fluid ">
-    <div class="column">
+    <div class="column justify-content-center">
         <a href="/experience">
             <img src="https://image.ibb.co/c9OsdH/logo_main.png" alt="logo_main" border="0">
         </a>
