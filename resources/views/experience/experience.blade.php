@@ -1,85 +1,8 @@
-@extends('layout') @section('title') !!your experiance
+@extends('../layout') @section('title') !!your experiance
 <!-- In php I need to create a function to dump the info from the get-->
 @endsection @section('content')
-<style>
-    .checked {
-        color: orange;
-    }
 
-    .container {
-        height: 100%;
-    }
-
-    .experience_main_picture {
-        background: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
-        /* height: 100vh; */
-        height: 80vh;
-        margin: 0;
-        text-align: left;
-        position: static;
-        /* position: absolute; */
-        background-size: cover;
-    }
-
-    .star_review_tags_price {
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .short_desc_user {
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-
-    }
-
-    .short_desc {
-        height: 22vmin;
-    }
-
-    .short_desc .row {
-        display: flex;
-        align-items: center;
-    }
-
-    .user_pic img {
-        border-radius: 1vmin;
-        height: 5vmin;
-    }
-
-    .video_time {
-        text-align: center;
-        display: table-caption;
-    }
-
-    .video_time video {
-        height: 100%;
-        width: 22vw;
-        z-index: 0;
-        border-radius: 1vmin;
-    }
-
-    .small_title {
-        font-size: 1.4em;
-    }
-
-    .v {
-        top: 20vh;
-        position: absolute;
-        float: right;
-    }
-
-    .calendar_btn,
-    .booking_btn {
-        /* font-size: 1.4rem; */
-        /* line-height: 3rem; */
-        font-weight: 500;
-        margin-top: 1rem;
-        background: #f35738;
-        color: #fff;
-    }
-</style>
+<link rel="stylesheet" href="/css/experience.css">
 
 <!-- This is the main jumbotron -->
 <div class="experience_main_picture welconp-3 p-md-5 text-white rounded bg-dark">
@@ -210,8 +133,8 @@
 
                                     var marker = new google.maps.Marker({
                                         position: {
-                                    lat: 50.0745,
-                                    lng: 14.431
+                                            lat: 50.0745,
+                                            lng: 14.431
                                             // lat: location.coords.latitude,
                                             // lng: location.coords.longitude
                                         },
@@ -236,7 +159,7 @@
                 <hr>
 
                 <section class="contact_host">
-                    <p class="small_title" >Reviews:</p>
+                    <p class="small_title">Reviews:</p>
                 </section>
                 <hr>
 
@@ -370,7 +293,7 @@
                             <!-- This is the calendar -->
                             <div class="collapse calendar-collapse" id="calendarSupportedContent">
 
-                            @include ('experience/calendar')
+                                @include ('experience/calendar')
                             </div>
                         </div>
                     </div>
