@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="/css/bookingpage3.css" rel="stylesheet">
+    <link href="public/css/bookingpage3.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="breadcrumb">
-	<a href="#">Review guest requirements </a>
-	<a href="#"> Who is coming </a>
-	<a href="#" class="active"> Order Confirmation </a>
+	<a href="/booking">Review guest requirements </a>
+	<a href="/booking2"> Who is coming </a>
+	<a href="/" class="active"> Order Confirmation </a>
 </div>
 <br /><br />
 

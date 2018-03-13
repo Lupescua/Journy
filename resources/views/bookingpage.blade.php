@@ -11,9 +11,9 @@
 <body>
 
 <div class="breadcrumb">
-	<a href="#" class="active">Review guest requirements </a>
-	<a href="#"> Who is coming </a>
-	<a href="#"> Order Confirmation </a>
+	<a href="/" class="active">Review guest requirements </a>
+	<a href="/booking2"> Who is coming </a>
+	<a href="/booking3"> Order Confirmation </a>
 </div>
 <br /><br />
 
