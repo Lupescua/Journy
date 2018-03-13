@@ -38,7 +38,7 @@
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
         }
 
         @-webkit-keyframes -amp-start {
@@ -92,7 +92,8 @@
                 -webkit-animation: none;
                 -moz-animation: none;
                 -ms-animation: none;
-                animation: none
+                animation: none;
+            overflow: hidden;
             }
         </style>
     </noscript>
@@ -144,7 +145,7 @@
                     <img src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" width="30" height="30" alt="Logo">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left:-10vw">
-                    <a class="dropdown-item active" href="/login">Log in / Sign up</a>
+                    <a class="dropdown-item active"><button class="btn btn-primary" id="modal-button">Log in / Sign up</button></a>
                     <a class="dropdown-item" href="/experience">Another action</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/">Log out</a>
@@ -157,18 +158,33 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
 
+    <script>
+$('#modal-button').click(function(){
 
-<div class="card-footer text-muted">
-    <span class="text-muted">Place footer elements here.</span>
-</div>
+$.ajax({
+    url: 'modal',
+    method:'get'
+    }).done(function(data){
+
+        var modal = $(data);
+
+        $('body').append(modal);
+        modal.modal('show');
+    })
+
+})
+</script>
+
+<footer>
+<div>Help</div>
+
+</footer>
 
 </body>
 
