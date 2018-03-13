@@ -13,8 +13,18 @@ class BookingController extends Controller
      */
     public function index()
     {
-        return view('booking');
+        return view('bookingpage');
     }
+    public function index2()
+    {
+        return view('bookingpage2');
+    }
+
+    public function index3()
+    {
+        return view('bookingpage3');
+    }
+
 
     /**
      * Show the form for creating a new resource.

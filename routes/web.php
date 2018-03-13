@@ -22,6 +22,9 @@ Route::get('/login', 'LoginController@index')->name('login') ;
 Route::get('/experience', 'ExperienceController@index') ;
 Route::get('/booking', 'BookingController@index') ;
 
+Route::get('/booking2', 'BookingController@index2') ;
+Route::get('/booking3', 'BookingController@index3') ;
+
 Auth::routes();
 
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
