@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="/css/bookingpage3.css" rel="stylesheet">
+    <link href="public/css/bookingpage3.css" rel="stylesheet">
 </head>
 <body>
 
