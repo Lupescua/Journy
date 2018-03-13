@@ -11,10 +11,23 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($step = "")
     {
-        return view('booking');
+        return view("booking/bookingpage{$step}");
+        //
     }
+
+
+    // public function index2()
+    // {
+    //     return view('bookingpage2');
+    // }
+
+    // public function index3()
+    // {
+    //     return view('bookingpage3');
+    // }
+
 
     /**
      * Show the form for creating a new resource.

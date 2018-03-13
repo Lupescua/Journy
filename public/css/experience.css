@@ -1,0 +1,77 @@
+.checked {
+    color: orange;
+}
+
+.container {
+    height: 100%;
+}
+
+.experience_main_picture {
+    background: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    /* height: 100vh; */
+    height: 80vh;
+    margin: 0;
+    text-align: left;
+    position: static;
+    /* position: absolute; */
+    background-size: cover;
+}
+
+.star_review_tags_price {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.short_desc_user {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.short_desc {
+    height: 22vmin;
+}
+
+.short_desc .row {
+    display: flex;
+    align-items: center;
+}
+
+.user_pic img {
+    border-radius: 1vmin;
+    height: 5vmin;
+}
+
+.video_time {
+    text-align: center;
+    display: table-caption;
+}
+
+.video_time video {
+    height: 100%;
+    width: 22vw;
+    z-index: 0;
+    border-radius: 1vmin;
+}
+
+.small_title {
+    font-size: 1.4em;
+}
+
+.v {
+    top: 20vh;
+    position: absolute;
+    float: right;
+}
+
+.calendar_btn,
+.booking_btn {
+    /* font-size: 1.4rem; */
+    /* line-height: 3rem; */
+    font-weight: 500;
+    margin-top: 1rem;
+    background: #f35738;
+    color: #fff;
+}

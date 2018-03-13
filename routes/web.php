@@ -20,7 +20,9 @@ Route::get('/', 'HomepageController@index')  ;
 Route::get('/location', 'LocationController@index') ;
 Route::get('/login', 'LoginController@index')->name('login') ;
 Route::get('/experience', 'ExperienceController@index') ;
-Route::get('/booking', 'BookingController@index') ;
+
+Route::get('/booking/{step?}', 'BookingController@index')->name('bookingstep') ;
+
 
 Auth::routes();
 

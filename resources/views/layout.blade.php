@@ -38,7 +38,7 @@
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
         }
 
         @-webkit-keyframes -amp-start {
@@ -92,7 +92,8 @@
                 -webkit-animation: none;
                 -moz-animation: none;
                 -ms-animation: none;
-                animation: none
+                animation: none;
+            overflow: hidden;
             }
         </style>
     </noscript>
@@ -162,7 +163,6 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
 
     <script>
 $('#modal-button').click(function(){
@@ -181,7 +181,10 @@ $.ajax({
 })
 </script>
 
+<footer>
+<div>Help</div>
 
+</footer>
 
 </body>
 
