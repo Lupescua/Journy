@@ -1,4 +1,17 @@
-@extends('layouts/booking') @section('content')
+
+@extends('layouts/booking') @section('bookingcontent')
+<style>
+.details_box{
+  border:1px black;
+}
+.bigger_text{
+  font-size:1.25em;
+}
+.booking_image img
+{
+  height:15vh;
+}
+</style>
 <div class="d-flex column">
   <div class="col-sm-6 col-md-6">
     <h1>
@@ -10,12 +23,45 @@
     <p> Guest ages 18 and up can attend. Parents may also bring children under 2 years old for free charges. If you bring a guest
       that's under 18 it is your responsability to make sure the activities they participate in are age-appropriate.</p>
   </div>
-  <div class="col-sm-6 col-md-6">
-    <p> Guest ages 18 and up can attend. Parents may also bring children under 2 years old for free charges. If you bring a guest
-      that's under 18 it is your responsability to make sure the activities they participate in are age-appropriate.</p>
+  <div class="col-sm-6 col-md-6 details_box">
+    <div class="d-flex column">>
+      <div class="col">
+        <p class="bigger_text">
+        Private room, good connection to the center
+        </p>
+        <p>
+        Private room in Prague
+        </p>
+      </div>
+      <div class="col booking_image">
+<img src="https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg" alt="
+Listing cover image">
+      </div>
+      <hr>
+      <p>1 guest</p>
+      <div class="d-flex column">
+        
+</div>
+      <p></p>
+    </div>
+
+1 guest
+Mar 15, 2018Mar 16, 2018
+€20.22 x 1 night
+€20.22
+Service fee
+
+€3.21
+Total (EUR)
+€23.43
+The quoted fees include any applicable exchange rate.
   </div>
 </div>
 
+<button type="submit">Forward</button>
+
+
+<hr>
 
 <form class="form-group" action="" method="get">
   <h2 class="heading">Details</h2>
