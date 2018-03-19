@@ -7,7 +7,7 @@ Journy-login
 
 @section('content')
 
-    <div class="jumbotron ">
+    <div class="jumbotron jumbotron-login">
         <div class="transbox">
             <div class="column">
                 <form>

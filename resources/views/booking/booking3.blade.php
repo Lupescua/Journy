@@ -1,4 +1,4 @@
-@extends('layouts/booking') @section('content')
+@extends('layouts/booking') @section('bookingcontent')
 <div class="container">
     <div class="row">
         <!-- You can make it whatever width you want. I'm making it full width

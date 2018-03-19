@@ -17,9 +17,20 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google fonts -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'  type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700' type='text/css'>
     <!-- Our CSS -->
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/location.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
     <!-- Mobile amp scripts -->
     <script type="application/ld+json">
@@ -93,22 +104,13 @@
                 -moz-animation: none;
                 -ms-animation: none;
                 animation: none;
-            overflow: hidden;
+                overflow: hidden;
             }
         </style>
     </noscript>
 
 
     <title> @yield('title')</title>
-    <style>
-        .panel-transparent {
-            background: none !important;
-        }
-
-        .dropdown-item:hover {
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -145,7 +147,9 @@
                     <img src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" width="30" height="30" alt="Logo">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left:-10vw">
-                    <a class="dropdown-item active"><button class="btn btn-primary" id="modal-button">Log in / Sign up</button></a>
+                    <a class="dropdown-item active">
+                        <button class="btn btn-primary" id="modal-button">Log in / Sign up</button>
+                    </a>
                     <a class="dropdown-item" href="/experience">Another action</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/">Log out</a>
@@ -156,35 +160,26 @@
 
     @yield('content')
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
     <script>
-$('#modal-button').click(function(){
+        $('#modal-button').click(function () {
 
-$.ajax({
-    url: 'modal',
-    method:'get'
-    }).done(function(data){
+            $.ajax({
+                url: 'modal',
+                method: 'get'
+            }).done(function (data) {
 
-        var modal = $(data);
+                var modal = $(data);
 
-        $('body').append(modal);
-        modal.modal('show');
-    })
+                $('body').append(modal);
+                modal.modal('show');
+            })
 
-})
-</script>
+        })
+    </script>
 
-<footer>
-<div>Help</div>
-
-</footer>
+    <footer>
+        <div>Help</div>
+    </footer>
 
 </body>
 

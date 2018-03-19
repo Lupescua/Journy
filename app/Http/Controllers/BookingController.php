@@ -13,21 +13,9 @@ class BookingController extends Controller
      */
     public function index($step = "")
     {
-        return view("booking/bookingpage{$step}");
+        return view("booking/booking{$step}");
         //
     }
-
-
-    // public function index2()
-    // {
-    //     return view('bookingpage2');
-    // }
-
-    // public function index3()
-    // {
-    //     return view('bookingpage3');
-    // }
-
 
     /**
      * Show the form for creating a new resource.

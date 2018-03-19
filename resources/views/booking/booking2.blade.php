@@ -1,4 +1,4 @@
-@extends('layouts/booking') @section('content')
+@extends('layouts/booking') @section('bookingcontent')
 <form action="">
   <!--  General -->
   <div class="form-group">

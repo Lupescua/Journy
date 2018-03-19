@@ -1,7 +1,7 @@
 
 
 
-    .jumbotron {
+    .jumbotron-login {
         background: url('/img/apple.jpg');
         width: 100vw;
         height: 80vh;
@@ -11,7 +11,7 @@
         justify-content: center;
     }
 
-    .jumbotron .transbox {
+    .jumbotron-login .transbox {
         margin: 30px;
         padding: 10px;
         background-color: rgba(255, 255, 255, 0.541);

@@ -1,0 +1,11 @@
+.jumbotron{
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.panel-transparent {
+    background: none !important;
+}
+
+.dropdown-item:hover {
+    text-decoration: none;
+}
