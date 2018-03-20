@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ExperienceController extends Controller
 {
     public function index(){
-        return view('experience/experience');
+        return view('experience.experience');
     }
 }
