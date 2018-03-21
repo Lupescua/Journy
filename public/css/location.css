@@ -18,3 +18,48 @@
 .center {
     margin: 0 auto;
 }
+
+.p {
+
+    width: 100vw;
+    height: 40px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+.img_prop{
+    text: black;
+    text-shadow: 2px 2px 4px #ff1e00fb;
+    height: auto;
+}
+.thumbnail{
+    background: white;
+    width: 100%;
+
+}
+
+.form-control{
+    border-radius: 20px;
+    margin: 14px;
+    margin-right: 0px;
+}
+
+.btn-outline-light{
+
+    border-radius: 20px;
+    margin: 14px;
+    margin-left: 0px;
+}
+
+.form-inline {
+    position: relative;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+.dupa{
+    color: rgb(245, 230, 21);
+
+}

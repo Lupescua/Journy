@@ -3,7 +3,8 @@
 }
 
 .panel-transparent {
-    background: none !important;
+    /* background: none !important;  */
+    background: white !important; 
 }
 
 .dropdown-item:hover {
