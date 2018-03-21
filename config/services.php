@@ -8,6 +8,12 @@ return [
         'redirect' => 'http://localhost:8000/callback',
     ],
 
+    'google' => [
+        'client_id' => '678338393216-34soj2nnffm88olhtmi8iif8vcarev9g.apps.googleusercontent.com',
+        'client_secret' => 'Vyvl7CyU9wRkCEBPua_J80nT',
+        'redirect' => 'http://localhost:8000/callback',
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
