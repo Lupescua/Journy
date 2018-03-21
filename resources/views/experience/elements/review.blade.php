@@ -7,16 +7,16 @@
                 <img src="https://pbs.twimg.com/profile_images/378800000769453762/8fbe7ec07f238b8a91fa3962235c5ef2.jpeg"
                      alt="Cersei Lanister profile picture">
                 <br>
-                <p>Cersei Lanister</p>
+                <p name="reviewer">Cersei Lanister</p>
             </a>
             <div>
-                <p class="small_title">I need a dragon instead of my High Sparrow</p>
-                <p>20/07/2017</p>
+                <p name="review_small_title" class="small_title">I need a dragon instead of my High Sparrow</p>
+                <p name="review_date">20/07/2017</p>
             </div>
 
         </div>
 
-        <p>“Oh, shut up, you little fool. Praying for the gods to have mercy on us all? The gods
+        <p name="review_body">“Oh, shut up, you little fool. Praying for the gods to have mercy on us all? The gods
             have no mercy,
             that’s why they are gods. My father told me that when he caught me praying. My mother
             had just
@@ -85,7 +85,7 @@
                 <img src="https://files.brightside.me/files/news/part_18/189705/2888655-_0025_5VIFIEU-650-a542d8629a-1480842238.jpg"
                      alt="Sansa Stark profile picture">
                 <br>
-                <p>Sansa Stark</p>
+                <p >Sansa Stark</p>
             </a>
             <div>
                 <p class="small_title">The snow drifted down and down</p>
