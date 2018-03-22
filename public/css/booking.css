@@ -1,4 +1,13 @@
 .booking-style {
     margin: 2rem;
-
+}
+.details_box{
+  border: solid 1px gainsboro;
+}
+.bigger_text{
+  font-size:1.25em;
+}
+.booking_image img
+{
+  height:15vh;
 }

@@ -1,4 +1,6 @@
-@extends('layouts/booking') @section('bookingcontent')
+@extends('layouts/booking')
+
+@section('bookingcontent')
 <form action="">
   <!--  General -->
   <div class="form-group booking-style">
@@ -49,5 +51,4 @@
     </div>
   </div>
 </form>
-
 @endsection

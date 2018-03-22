@@ -182,7 +182,6 @@
     <footer>
         <div>Help</div>
     </footer>
-
 </body>
 
 </html>
