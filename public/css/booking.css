@@ -3,6 +3,7 @@
 }
 .details_box{
   border: solid 1px gainsboro;
+  padding: 2rem;
 }
 .bigger_text{
   font-size:1.25em;

@@ -16,11 +16,19 @@ Booking
 
 <div class="booking-style">
   <div class="d-flex column">
+    <div class="col-sm-6 col-md-6">
 
-
+<h1>
+      <strong>
+    @yield('header')
+    </strong>
+    </h1>
+    
     @yield('bookingcontent')
 
 
+
+    </div>
     <div class="col-sm-6 col-md-6 details_box">
     <div class="d-flex column">
       <div class="col">

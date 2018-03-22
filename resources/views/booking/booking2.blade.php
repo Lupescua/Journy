@@ -4,7 +4,9 @@
 <form action="">
   <!--  General -->
   <div class="form-group booking-style">
-    <h2 class="heading">Booking & contact</h2>
+  @section('header')
+  Booking & Contact
+  @endsection
     <div class="controls">
       <input type="text" id="name" class="floatLabel" name="name">
       <label for="name">Name</label>
