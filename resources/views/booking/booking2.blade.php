@@ -1,12 +1,14 @@
 @extends('layouts/booking')
 
 @section('bookingcontent')
+
+@section('header')
+Booking & Contact
+@endsection
+
 <form action="">
   <!--  General -->
   <div class="form-group booking-style">
-  @section('header')
-  Booking & Contact
-  @endsection
     <div class="controls">
       <input type="text" id="name" class="floatLabel" name="name">
       <label for="name">Name</label>

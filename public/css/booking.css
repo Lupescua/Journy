@@ -1,6 +1,11 @@
 .booking-style {
     margin: 2rem;
 }
+.booking-header a {
+text-decoration: none;
+margin-left: .8rem;
+color: black;
+}
 .details_box{
   border: solid 1px gainsboro;
   padding: 2rem;

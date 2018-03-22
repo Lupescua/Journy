@@ -5,17 +5,17 @@ Booking
 @endsection
 
 @section('content')
-    <div class="breadcrumb">
-        <a href="{{route('bookingstep')}}" class="active">Review guest requirements</a>
-        <a href="{{route('bookingstep',[2])}}"> Who is coming</a>
-        <a href="{{route('bookingstep',[3])}}"> Order Confirmation</a>
+    <div class="breadcrumb booking-header">
+        <a href="{{route('bookingstep')}}" class="active">1. Review guest requirements</a>
+        <a href="{{route('bookingstep',[2])}}">2. Who is coming</a>
+        <a href="{{route('bookingstep',[3])}}">3. Order Confirmation</a>
     </div>
     <br />
     <br />
 
 
 <div class="booking-style">
-  <div class="d-flex column">
+  <div class="d-flex row">
     <div class="col-sm-6 col-md-6">
 
 <h1>
@@ -23,15 +23,16 @@ Booking
     @yield('header')
     </strong>
     </h1>
-    
+
     @yield('bookingcontent')
+
 
 
 
     </div>
     <div class="col-sm-6 col-md-6 details_box">
-    <div class="d-flex column">
-      <div class="col">
+    <div class="d-flex row">
+      <div class="col-lg-6">
         <p class="bigger_text">
           Private room, good connection to the center
         </p>
@@ -39,7 +40,7 @@ Booking
           Private room in Prague
         </p>
       </div>
-      <div class="col booking_image">
+      <div class="col-sm-4 col-md-5 col-lg-6 booking_image">
         <img src="https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg" alt="Listing cover image">
       </div>
     </div>

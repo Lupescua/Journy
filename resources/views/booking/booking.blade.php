@@ -4,7 +4,7 @@
 @section('bookingcontent')
 
 @section('header')
-    Review Guest Requirements
+Review Guest Requirements
 @endsection
 
     <h3> Who can come </h3>
