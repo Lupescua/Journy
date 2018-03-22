@@ -11,15 +11,10 @@
         <form method="post" action="/new_user">
             {{csrf_field()}}
             <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="validationDefault01">First name</label>
-                    <input name="first_name" type="text" class="form-control" id="validationDefault01"
-                           placeholder="First name" value="Mark" required>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationDefault02">Last name</label>
-                    <input name="last_name" type="text" class="form-control" id="validationDefault02"
-                           placeholder="Last name" value="Otto" required>
+                <div class="col-md-8 mb-3">
+                    <label for="validationDefault01">Name</label>
+                    <input name="name" type="text" class="form-control" id="validationDefault01"
+                           placeholder="First name" value="Mark Zuckerberg" required>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationDefaultEmail">Email</label>
@@ -29,7 +24,7 @@
                         </div>
                         <input name="email" type="email" class="form-control" id="validationDefaultEmail"
                                placeholder="Email" aria-describedby="inputGroupPrepend2" value="gmail@chuck.norris"
-                               >
+                               required >
                     </div>
                 </div>
             </div>
