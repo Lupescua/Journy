@@ -1,5 +1,5 @@
 @extends('layouts/booking') @section('bookingcontent')
-<div class="container">
+<div class="container booking-style">
     <div class="row">
         <!-- You can make it whatever width you want. I'm making it full width
 on <= small devices and 4/12 page width on >= medium devices -->

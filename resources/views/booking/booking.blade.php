@@ -12,6 +12,7 @@
   height:15vh;
 }
 </style>
+<div class="booking-style">
 <div class="d-flex column">
   <div class="col-sm-6 col-md-6">
     <h1>
@@ -24,37 +25,33 @@
       that's under 18 it is your responsability to make sure the activities they participate in are age-appropriate.</p>
   </div>
   <div class="col-sm-6 col-md-6 details_box">
-    <div class="d-flex column">>
+    <div class="d-flex column">
       <div class="col">
         <p class="bigger_text">
-        Private room, good connection to the center
+          Private room, good connection to the center
         </p>
         <p>
-        Private room in Prague
+          Private room in Prague
         </p>
       </div>
       <div class="col booking_image">
 <img src="https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg" alt="
 Listing cover image">
       </div>
-      <hr>
-      <p>1 guest</p>
-      <div class="d-flex column">
-        
-</div>
-      <p></p>
     </div>
+    <hr>
+        <p>
+          1 guest
+          Mar 15, 2018Mar 16, 2018
+          €20.22 x 1 night
+          €20.22
+          Service fee
 
-1 guest
-Mar 15, 2018Mar 16, 2018
-€20.22 x 1 night
-€20.22
-Service fee
-
-€3.21
-Total (EUR)
-€23.43
-The quoted fees include any applicable exchange rate.
+          €3.21
+          Total (EUR)
+          €23.43
+          The quoted fees include any applicable exchange rate.
+        </p>
   </div>
 </div>
 
@@ -108,6 +105,7 @@ The quoted fees include any applicable exchange rate.
     </div>
   </div>
 </form>
+</div
 
 <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
 @endsection
