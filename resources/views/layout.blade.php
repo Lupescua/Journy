@@ -132,7 +132,7 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/">
                         <span class="navbar-toggler-icon">
-                            <img src="http://www.ryanhamilton.ca/Logos/logo_18.jpg" width="60" height="30" alt="Logo">
+                            <img id="logo" src="\img\profile_picture_green.jpg" width="30" height="30" alt="Logo">
                     </a>
                 </li>
                 <!--Optional Elements

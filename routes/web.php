@@ -25,7 +25,8 @@ Route::get('/experience', 'ExperienceController@index') ;
 Route::get('/booking/{step?}', 'BookingController@index')->name('bookingstep') ;
 
 
-Route::get('/new_user', 'UserController@index') ;
+//Route::get('/new_user', 'UserController@index') ;
+Route::post('/new_user', 'UserController@store') ;
 
 Auth::routes();
 
