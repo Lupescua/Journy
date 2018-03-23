@@ -1,8 +1,14 @@
-@extends('layouts/booking') @section('bookingcontent')
+@extends('layouts/booking')
+
+@section('bookingcontent')
+
+@section('header')
+Booking & Contact
+@endsection
+
 <form action="">
   <!--  General -->
-  <div class="form-group">
-    <h2 class="heading">Booking & contact</h2>
+  <div class="form-group booking-style">
     <div class="controls">
       <input type="text" id="name" class="floatLabel" name="name">
       <label for="name">Name</label>
@@ -49,5 +55,4 @@
     </div>
   </div>
 </form>
-
 @endsection

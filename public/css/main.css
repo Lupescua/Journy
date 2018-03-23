@@ -1,9 +1,18 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 .jumbotron{
     text-shadow: 2px 2px 4px #000000;
 }
 
 .panel-transparent {
-    background: none !important;
+    /* background: none !important;  */
+    background: white !important;
 }
 
 .dropdown-item:hover {

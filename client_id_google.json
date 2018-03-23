@@ -1,0 +1,10 @@
+{"web":{
+    "client_id":"678338393216-34soj2nnffm88olhtmi8iif8vcarev9g.apps.googleusercontent.com",
+    "project_id":"journy-12345","auth_uri":"https://accounts.google.com/o/oauth2/auth",
+    "token_uri":"https://accounts.google.com/o/oauth2/token",
+    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret":"Vyvl7CyU9wRkCEBPua_J80nT",
+    "redirect_uris":["http://localhost"],
+    "javascript_origins":["http://localhost"]
+    }
+}
