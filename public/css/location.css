@@ -30,7 +30,7 @@
 }
 .img_prop{
     text: black;
-    text-shadow: 2px 2px 4px #ff1e00fb;
+    /* text-shadow: 2px 2px 4px black; */
     height: auto;
 }
 .thumbnail{
@@ -59,7 +59,7 @@
 
 }
 
-.dupa{
-    color: rgb(245, 230, 21);
-
+.dx{
+    /* color: rgb(245, 230, 21); */
+    color: rgb(0, 0, 0);
 }
