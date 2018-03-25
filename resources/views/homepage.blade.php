@@ -34,7 +34,7 @@
             <img src="https://image.ibb.co/c9OsdH/logo_main.png" alt="logo_main" border="0">
         </a>
         <form class="form-inline" style="position:relative" action="{{action('LocationController@index')}}" method="get" >
-            <input class="form-control  font-weight-bold mr-auto " style="background: #fff; margin-left:auto; margin-right:0;" type="search"
+            <input class="form-rounded  font-weight-bold mr-auto " style="background: #fff; margin-left:auto; margin-right:0;" type="search"
                 placeholder="Search" name="search" aria-label="Search"/>
                 <!-- <input type="submit"/> -->
                 <div class="form-group">

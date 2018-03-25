@@ -10,7 +10,7 @@
       method="get">
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="search" class="form-control" id="exampleInputName1" placeholder="Place from homepage"
+        <input type="text" name="search" class="form-rounded" id="exampleInputName1" placeholder="Place from homepage"
           value="{{ $search }}">
       </div>
 
@@ -20,7 +20,7 @@
       </span>
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="filter1" class="form-control" id="exampleInputName2" placeholder="Activity" value="{{ $filter1 }}">
+        <input type="text" name="filter1" class="form-rounded" id="exampleInputName2" placeholder="Activity" value="{{ $filter1 }}">
       </div>
       @endif
 
@@ -30,7 +30,7 @@
       </span>
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="filter2" class="form-control" id="exampleInputName3" placeholder="Additional activity"
+        <input type="text" name="filter2" class="form-rounded" id="exampleInputName3" placeholder="Additional activity"
           value="{{ $filter2 }}">
       </div>
       @endif
@@ -41,7 +41,7 @@
       </span>
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="filter3" class="form-control" id="exampleInputName4" placeholder="More activities"
+        <input type="text" name="filter3" class="form-rounded" id="exampleInputName4" placeholder="More activities"
           value="{{ $filter3 }}">
       </div
       >@endif

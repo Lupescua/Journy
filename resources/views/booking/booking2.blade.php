@@ -6,53 +6,49 @@
 Booking & Contact
 @endsection
 
-<form action="">
+<form action="" class="form-group booking-style">
   <!--  General -->
-  <div class="form-group booking-style">
+      <label for="name">Name</label></br>
+      <input type="text" name="name" placeholder="First"><input type="text" name="name" placeholder="Last">
     <div class="controls">
-      <input type="text" id="name" class="floatLabel" name="name">
-      <label for="name">Name</label>
-    </div>
-    <div class="controls">
-      <input type="text" id="email" class="floatLabel" name="email">
       <label for="email">Email</label>
+      <input type="text" id="email" class="form-control" name="email">
     </div>
     <div class="controls">
-      <input type="tel" id="phone" class="floatLabel" name="phone">
       <label for="phone">Phone</label>
+      <input type="tel" id="phone" class="floatLabel" name="phone">
     </div>
     <div class="grid">
       <div class="col-2-3">
         <div class="controls">
-          <input type="text" id="street" class="floatLabel" name="street">
           <label for="street">Street</label>
+          <input type="text" id="street" class="floatLabel" name="street">
         </div>
       </div>
       <div class="col-1-3">
         <div class="controls">
-          <input type="number" id="street-number" class="floatLabel" name="street-number">
           <label for="street-number">Number</label>
+          <input type="number" id="street-number" class="floatLabel" name="street-number">
         </div>
       </div>
     </div>
     <div class="grid">
       <div class="col-2-3">
         <div class="controls">
-          <input type="text" id="city" class="floatLabel" name="city">
           <label for="city">City</label>
+          <input type="text" id="city" class="floatLabel" name="city">
         </div>
       </div>
       <div class="col-1-3">
         <div class="controls">
-          <input type="text" id="post-code" class="floatLabel" name="post-code">
           <label for="post-code">Post Code</label>
+          <input type="text" id="post-code" class="floatLabel" name="post-code">
         </div>
       </div>
     </div>
     <div class="controls">
-      <input type="text" id="country" class="floatLabel" name="country">
       <label for="country">Country</label>
+      <input type="text" id="country" class="floatLabel" name="country">
     </div>
-  </div>
 </form>
 @endsection
