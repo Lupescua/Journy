@@ -6,7 +6,7 @@
 Payment Details
 @endsection
 
-<div class="container booking-style">
+<div class="container">
     <div class="row">
         <!-- You can make it whatever width you want. I'm making it full width
 on <= small devices and 4/12 page width on >= medium devices -->
@@ -28,7 +28,7 @@ on <= small devices and 4/12 page width on >= medium devices -->
                             <div class="col-xs-12">
                                     <label for="cardNumber">CARD NUMBER</label>
                                     <div class="input-group">
-                                        <input type="tel" class="form-control-booking" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required
+                                        <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required
                                             autofocus />
                                         <span class="input-group-addon">
                                             <i class="fa fa-credit-card"></i>
