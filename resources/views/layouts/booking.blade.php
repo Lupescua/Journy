@@ -28,7 +28,7 @@ Booking
 
 
 
-<button type="submit" class="booking-style pull-right">Forward</button>
+<button type="submit" class="pull-right">Forward</button>
     </div>
     <div class="col-sm-6 col-md-6 details_box">
     <div class="d-flex row">
@@ -65,3 +65,6 @@ Booking
 @yield('details')
 
 @endsection
+
+
+

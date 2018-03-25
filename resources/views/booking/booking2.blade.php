@@ -6,49 +6,35 @@
 Booking & Contact
 @endsection
 
-<form action="" class="form-group booking-style">
+
+<form action="">
+  <div class="form-group">
   <!--  General -->
       <label for="name">Name</label></br>
-      <input type="text" name="name" placeholder="First"><input type="text" name="name" placeholder="Last">
-    <div class="controls">
-      <label for="email">Email</label>
-      <input type="text" id="email" class="form-control" name="email">
-    </div>
-    <div class="controls">
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" class="floatLabel" name="phone">
-    </div>
-    <div class="grid">
-      <div class="col-2-3">
-        <div class="controls">
-          <label for="street">Street</label>
-          <input type="text" id="street" class="floatLabel" name="street">
-        </div>
-      </div>
-      <div class="col-1-3">
-        <div class="controls">
-          <label for="street-number">Number</label>
-          <input type="number" id="street-number" class="floatLabel" name="street-number">
-        </div>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="col-2-3">
-        <div class="controls">
-          <label for="city">City</label>
-          <input type="text" id="city" class="floatLabel" name="city">
-        </div>
-      </div>
-      <div class="col-1-3">
-        <div class="controls">
-          <label for="post-code">Post Code</label>
-          <input type="text" id="post-code" class="floatLabel" name="post-code">
-        </div>
-      </div>
-    </div>
-    <div class="controls">
-      <label for="country">Country</label>
-      <input type="text" id="country" class="floatLabel" name="country">
-    </div>
+      <input type="text" name="name" class="form-control" placeholder="First">
+      <input type="text" name="name" class="form-control" placeholder="Last">
+
+      <label for="email">E-mail</label>
+      <input type="text" id="email" class="form-control" name="email" placeholder="E-mail">
+
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" class="form-control" name="phone" placeholder="Phone">
+
+
+      <label for="street">Address</label>
+      <input type="text" class="form-control" placeholder="Street address">
+      <input type="text" class="form-control" placeholder="Street address line 2">
+      <input type="text" class="form-control" placeholder="City">
+      <input type="text" class="form-control" placeholder="Region">
+      <input type="text" class="form-control" placeholder="Postal / Zip Code">
+      <input type="text" class="form-control" placeholder="Country">
+
+      <label for="comments">Comments</label>
+      <textarea class="form-control" rows="3" placeholder="Your comments come here.."></textarea>
+
+
+
+  </div>
 </form>
+
 @endsection
