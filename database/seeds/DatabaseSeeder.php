@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
         \App\User::create([
             'name'=>'Jon Snow',
             'email'=>'usetr@snow.com',
@@ -57,7 +56,6 @@ class DatabaseSeeder extends Seeder
     'location_lng'=>'54343',
     'location_lat'=>'123456',
 ]);
-=======
         $continent = Continent::create([
             'name' => 'asia'
         ]);
@@ -236,6 +234,5 @@ class DatabaseSeeder extends Seeder
                 ]);
 
         // $this->call(UsersTableSeeder::class);
->>>>>>> BartiBranch
     }
 }
