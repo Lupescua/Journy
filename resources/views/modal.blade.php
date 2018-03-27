@@ -15,7 +15,7 @@
                 <br><br>
                 <img src="/img/google.png" alt="google login" height="71rem">
                 <br><br>
-                <img src="/img/instagram.png" alt="instagram login" height="71rem" style="border-radius: 5px">
+                <img src="/img/instagram.png" alt="instagram login" height="70rem" style="border-radius: 5px">
 
 
         </form>

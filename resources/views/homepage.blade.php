@@ -33,9 +33,15 @@
         <a href="/experience">
             <img src="https://image.ibb.co/c9OsdH/logo_main.png" alt="logo_main" border="0">
         </a>
-        <form class="form-inline" style="position:relative; " method="post" >
-            <input class="form-control  font-weight-bold mr-auto " style="background: #fff; margin-left:auto; margin-right:0;" type="search"
-                placeholder="Search" aria-label="Search">
+        <form class="form-inline" style="position:relative" action="{{action('LocationController@index')}}" method="get" >
+            <input class="form-rounded  font-weight-bold mr-auto " style="background: #fff; margin-left:auto; margin-right:0;" type="search"
+                placeholder="Search" name="search" aria-label="Search"/>
+                <!-- <input type="submit"/> -->
+                <div class="form-group">
+        <button type="submit" class="btn btn-outline-light">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
         </form>
     </div>
 </div>

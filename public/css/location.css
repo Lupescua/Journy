@@ -30,19 +30,26 @@
 }
 .img_prop{
     text: black;
-    text-shadow: 2px 2px 4px #ff1e00fb;
+    /* text-shadow: 2px 2px 4px black; */
     height: auto;
 }
 .thumbnail{
     background: white;
     width: 100%;
-
 }
 
-.form-control{
+.form-rounded{
     border-radius: 20px;
     margin: 14px;
     margin-right: 0px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color .15s
 }
 
 .btn-outline-light{
@@ -59,7 +66,7 @@
 
 }
 
-.dupa{
-    color: rgb(245, 230, 21);
-
+.dx{
+    /* color: rgb(245, 230, 21); */
+    color: rgb(0, 0, 0);
 }
