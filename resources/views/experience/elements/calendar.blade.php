@@ -1,9 +1,6 @@
 <script language="javascript" type="text/javascript">
     var day_of_week = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
-    var month_of_year = new Array('January', 'February', 'March', 'April', 'May',
-        'June',
-        'July',
-        'August', 'September', 'October', 'November', 'December');
+    var month_of_year = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
 
     //  DECLARE AND INITIALIZE VARIABLES
     var Calendar = new Date();
@@ -27,8 +24,7 @@
 
     var TR_start = '<TR>';
     var TR_end = '</TR>';
-    var highlight_start =
-        '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><CENTER>';
+    var highlight_start = '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><CENTER>';
     var highlight_end = '</CENTER></TD></TR></TABLE></B>';
     var TD_start = '<TD WIDTH="30"><CENTER>';
     var TD_end = '</CENTER></TD>';
@@ -103,5 +99,5 @@
     //  PRINT CALENDAR
     document.write(cal);
 
-    //  End -->
+    //  End
 </script>
