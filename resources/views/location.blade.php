@@ -10,327 +10,80 @@
       method="get">
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="search" class="form-rounded" id="exampleInputName1" placeholder="Place from homepage"
-          value="{{ $search }}">
+        <input type="text" name="continent" class="form-control" id="exampleInputName1" placeholder="Place from homepage"
+          value="{{ $continent }}">
       </div>
 
-      @if(isset($search))
+      @if(isset($continent))
       <span class="badge badge-secondary">
         <i class="fa fa-plus"></i>
       </span>
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="filter1" class="form-rounded" id="exampleInputName2" placeholder="Activity" value="{{ $filter1 }}">
-      </div>
-      @endif
-
-      @if(isset($filter1))
-      <span class="badge badge-secondary">
-        <i class="fa fa-plus"></i>
-      </span>
-      <div class="form-group">
-        <label for="exampleInputName2"></label>
-        <input type="text" name="filter2" class="form-rounded" id="exampleInputName3" placeholder="Additional activity"
-          value="{{ $filter2 }}">
+        <input type="text" name="region" class="form-control" id="exampleInputName2"
+        placeholder="Region" value="{{ $region }}">
       </div>
       @endif
 
-      @if(isset($filter2))
+      @if(isset($region))
       <span class="badge badge-secondary">
         <i class="fa fa-plus"></i>
       </span>
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="filter3" class="form-rounded" id="exampleInputName4" placeholder="More activities"
-          value="{{ $filter3 }}">
-      </div
-      >@endif
+        <input type="text" name="activity" class="form-control" id="exampleInputName3" placeholder="Additional activity"
+          value="{{ $activity }}">
+      </div>
+      @endif
+
       <div class="form-group">
         <button type="submit" class="btn btn-outline-light">
           <i class="fa fa-search"></i>
         </button>
       </div>
-      <!-- <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <br>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a>
-      <a class="btn btn-secondary" href="#" role="button">Link</a> -->
 
+      <div class="links">
+      <a class="btn btn-secondary" href="#" role="button">Asian food</a>
+      <a class="btn btn-secondary" href="#" role="button">Asia on bike</a>
+      <a class="btn btn-secondary" href="#" role="button">Spa on Bali</a>
+      <a class="btn btn-secondary" href="#" role="button">Bali trekking</a>
+      <a class="btn btn-secondary" href="#" role="button">Grassland trekking</a>
+      <a class="btn btn-secondary" href="#" role="button">Rest on Goa</a>
+      <a class="btn btn-secondary" href="#" role="button">Secrets of India</a>
+      <a class="btn btn-secondary" href="#" role="button">Day in Delhi</a>
+      <a class="btn btn-secondary" href="#" role="button">Phillipina adventure</a>
+      <a class="btn btn-secondary" href="#" role="button">Cambodia bikers</a>
+      <a class="btn btn-secondary" href="#" role="button">Harajuku Japan</a>
+      <a class="btn btn-secondary" href="#" role="button">Polish food</a>
+      <a class="btn btn-secondary" href="#" role="button">New Zealand and island</a>
+      <a class="btn btn-secondary" href="#" role="button">Siberian roots</a>
+      <a class="btn btn-secondary" href="#" role="button">Scooter with Brad</a>
+      <a class="btn btn-secondary" href="#" role="button">Trekking in Nepal</a>
+      <a class="btn btn-secondary" href="#" role="button">Tea plantation on Java</a>
+      <a class="btn btn-secondary" href="#" role="button">Hot Borneo</a>
+      <a class="btn btn-secondary" href="#" role="button">Sri Lanka beaches</a>
+      </div>
 
     </form>
   </div>
 </div>
 <div class="container">
   <div class="row">
+
+  @foreach($experiences as $experience)
     <div class="col-md-2 img_prop rounded bg-dark">
       <div class="thumbnail">
         <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
+          <img src="\img\{{ $experience->image }}" alt="{{ $experience->name }}" style="width:100%">
           <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
+            <p class="dx">{{ $experience->name }}</p>
           </div>
         </a>
       </div>
     </div>
-    <div class="col-md-2 img_prop rounded bg-dark">
-      <div class="thumbnail">
-        <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-          <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-2 img_prop rounded bg-dark">
-      <div class="thumbnail">
-        <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-          <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-2 img_prop rounded bg-dark">
-      <div class="thumbnail">
-        <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-          <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-2 img_prop rounded bg-dark">
-      <div class="thumbnail">
-        <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-          <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-2 img_prop rounded bg-dark">
-      <div class="thumbnail">
-        <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-          <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-2 img_prop rounded bg-dark">
-      <div class="thumbnail">
-        <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-          <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-2 img_prop rounded bg-dark">
-      <div class="thumbnail">
-        <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-          <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-2 img_prop rounded bg-dark">
-      <div class="thumbnail">
-        <a href="" target="_blank">
-          <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-          <div class="caption">
-            <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-          </div>
-        </a>
-      </div>
-    </div>
+  @endforeach
 </div>
 
-<div class="row">
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\normand.jpg" alt="Normandie" style="width:100%">
-        <div class="caption">
-          <p class="dx">Normandie Sightseeing with Antoine</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\bali_local.jpg" alt="Bali" style="width:100%">
-        <div class="caption">
-          <p class="dx">Trip on Bali with Yaya</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\philipina.jpg" alt="Phillipina" style="width:100%">
-        <div class="caption">
-          <p class="dx">Phillipina Heights with Coco</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\PolandMarket.jpg" alt="Agnieszka" style="width:100%">
-        <div class="caption">
-          <p class="dx">Paths of finding Polish healthy food with Agnieszka</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\camodia-bike.jpg" alt="Cambodia" style="width:100%">
-        <div class="caption">
-          <p>Cambodia from the scooter with Brad</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop raunded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\mongolia_for_hipsters.jpg" alt="Mongolia" style="width:100%">
-        <div class="caption">
-          <p class="dx">Mongolia for hipsters with Kris</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\harajuku.jpg" alt="harajuku" style="width:100%">
-        <div class="caption">
-          <p class="dx">Shopping with Harajuku Girls in Tokio.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\locals_siberia.jpg" alt="siberia" style="width:100%">
-        <div class="caption">
-          <p class="dx">Siberian trekking with Nikita and Sasha</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\newzealand.jpg" alt="New Zealand" style="width:100%">
-        <div class="caption">
-          <p class="dx">New Zealand experience with Aria and Samuel</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\normand.jpg" alt="Normandie" style="width:100%">
-        <div class="caption">
-          <p class="dx">Normandie Sightseeing with Antoine</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\bali_local.jpg" alt="Bali" style="width:100%">
-        <div class="caption">
-          <p class="dx">Trip on Bali with Yaya</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\philipina.jpg" alt="Phillipina" style="width:100%">
-        <div class="caption">
-          <p class="dx">Phillipina Heights with Coco</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\PolandMarket.jpg" alt="Agnieszka" style="width:100%">
-        <div class="caption">
-          <p class="dx">Paths of finding Polish healthy food with Agnieszka</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop rounded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\camodia-bike.jpg" alt="Cambodia" style="width:100%">
-        <div class="caption">
-          <p>Cambodia from the scooter with Brad</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-2 img_prop raunded bg-dark">
-    <div class="thumbnail">
-      <a href="" target="_blank">
-        <img src="\img\mongolia_for_hipsters.jpg" alt="Mongolia" style="width:100%">
-        <div class="caption">
-          <p class="dx">Mongolia for hipsters with Kris</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
 </div>
 
 @endsection

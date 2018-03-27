@@ -60,13 +60,25 @@
 }
 
 .form-inline {
-    position: relative;
+    justify-content: center;
     padding: 10px;
     margin: 0 auto;
-
 }
 
 .dx{
     /* color: rgb(245, 230, 21); */
     color: rgb(0, 0, 0);
+}
+
+.btn-secondary{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+
+
+}
+
+.links {
+    /* display: flex; */
+    text-align: center;
 }
