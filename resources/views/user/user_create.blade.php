@@ -56,7 +56,7 @@
             </div>
             <div class="form-group">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" >
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required >
                     <label name="agree_to_terms" class="form-check-label" for="invalidCheck2">
                         Agree to terms and conditions
                     </label>
