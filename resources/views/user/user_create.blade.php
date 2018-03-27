@@ -1,14 +1,7 @@
 @extends('layout') @section('title') Journy @endsection @section('content')
     <div class="container">
 
-        {{--condition authenticated--}}
-        {{--<input type="hidden">--}}
-        {{--Users:--}}
-        {{--id  -> int--}}
-        {{--login_type (meaning FB, Instagram,Google+)  -> varchar--}}
-
-
-        <form method="post" action="/new_user">
+        <form method="post" action="{{ action('UserController@store') }}">
             {{csrf_field()}}
             <div class="form-row">
                 <div class="col-md-8 mb-3">
@@ -20,7 +13,7 @@
                     <label for="validationDefaultEmail">Email</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                            {{--<span class="input-group-text" id="inputGroupPrepend2">@</span>--}}
                         </div>
                         <input name="email" type="email" class="form-control" id="validationDefaultEmail"
                                placeholder="Email" aria-describedby="inputGroupPrepend2" value="gmail@chuck.norris"
@@ -98,23 +91,5 @@
             <button class="btn btn-primary" type="submit">Submit</button>
         </form>
 
-        <form method="post" action="">
-            {{csrf_field()}}
-            {{--local  -> boolean--}}
-            {{--adress  -> varchar  Done--}}
-            {{--FB_info_id -> int--}}
-            {{--Insta_info_id  -> int--}}
-            {{--Google+_info_id  -> int--}}
-            {{--payment_details_id  -> int--}}
-            {{--user_photo  -> varchar / url--}}
-            {{--phone_nr  -> int  Done--}}
-            {{--email  -> email  Done--}}
-            {{--governement_identificat  -> varchar--}}
-            {{--language  -> varchar--}}
-
-
-            <button type="submit" class="btn btn-primary">Sign in</button>
-
-        </form>
     </div>
 @endsection
