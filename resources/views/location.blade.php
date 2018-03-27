@@ -10,8 +10,8 @@
       method="get">
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="search" class="form-rounded" id="exampleInputName1" placeholder="Place from homepage"
-          value="{{ $search }}">
+        <input type="text" name="continent" class="form-control" id="exampleInputName1" placeholder="Place from homepage"
+          value="{{ $continent }}">
       </div>
 
       @if(isset($continent))
@@ -20,7 +20,8 @@
       </span>
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="filter1" class="form-control" id="exampleInputName2" placeholder="Activity" value="{{ $filter1 }}">
+        <input type="text" name="region" class="form-control" id="exampleInputName2"
+        placeholder="Region" value="{{ $region }}">
       </div>
       @endif
 
@@ -30,17 +31,11 @@
       </span>
       <div class="form-group">
         <label for="exampleInputName2"></label>
-        <input type="text" name="filter2" class="form-control" id="exampleInputName3" placeholder="Additional activity"
-          value="{{ $filter2 }}">
+        <input type="text" name="activity" class="form-control" id="exampleInputName3" placeholder="Additional activity"
+          value="{{ $activity }}">
       </div>
       @endif
 
-      <div class="form-group">
-        <label for="exampleInputName2"></label>
-        <input type="text" name="filter3" class="form-control" id="exampleInputName4" placeholder="More activities"
-          value="{{ $filter3 }}">
-      </div
-      >@endif
       <div class="form-group">
         <button type="submit" class="btn btn-outline-light">
           <i class="fa fa-search"></i>

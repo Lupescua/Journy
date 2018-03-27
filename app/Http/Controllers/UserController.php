@@ -43,27 +43,24 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user =  new User();
+        if($request->agree_to_terms != true){
+            $user =  new User();
+            $user->name = $request->name;
+            $user->password = 'set_from_controller';
+            $user->email = $request->email;
+            $user->adress_country = $request->adress_country;
+            $user->adress_city = $request->adress_city;
+            $user->adress_state = $request->adress_state;
+            $user->adress_street = $request->adress_street;
+            $user->adress_zip = $request->adress_zip;
+            $user->prefered_language = $request->prefered_language;
+            $user->user_tags = $request->user_tags;
+            $user->save();
+            //redirect to show page
+            return redirect(action('UserController@show',[$user->id]));
+        }
+            return redirect(action('UserController@index'));
 
-//        $user->validate(request(),[
-//            'name'=>'required',
-//            'email' =>'required'
-//        ]);
-
-        $user->name = $request->name;
-        $user->options = $request->options;
-        $user->adress_country = $request->adress_country;
-        $user->adress_city = $request->adress_city;
-        $user->adress_state = $request->adress_state;
-        $user->adress_street = $request->adress_street;
-        $user->adress_zip = $request->adress_zip;
-        $user->prefered_language = $request->prefered_language;
-        $user->user_tags = $request->user_tags;
-
-        $user->save();
-
-        //redirect to show page
-        return redirect(action('UserController@show',[$user->id]));
     }
     /**
      * Display the specified resource.
@@ -74,7 +71,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view('user.test',compact('user'));
+        return view('user.user_page',compact('user'));
     }
 
 

@@ -7,7 +7,7 @@
                 <div class="col-md-8 mb-3">
                     <label for="validationDefault01">Name</label>
                     <input name="name" type="text" class="form-control" id="validationDefault01"
-                           placeholder="First name" value="Mark Zuckerberg" required>
+                           placeholder="Full Name" value="Mark Zuckerberg" required>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationDefaultEmail">Email</label>
@@ -25,7 +25,7 @@
             <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="validationDefault05">Country</label>
-                    <input name="adress_country" type="text" class="form-control" id="validationDefault05"
+                    <input name="adress_country" type="text" class="form-control" id="validationDefault02"
                            placeholder="Country" >
                 </div>
                 <div class="col-md-6 mb-3">
@@ -36,21 +36,22 @@
                 <div class="col-md-3 mb-3">
                     <label for="inputState">State</label>
                     <select name="adress_state" id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                        <option selected>Choose</option>
+                        <option>Timis</option>
+                        <option>Olt</option>
+                        <option>Dolj</option>
                     </select>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-9 mb-3">
                     <label for="inputAddress">Home Address</label>
-                    <input name="adress_street" type="text" class="form-control" id="validationDefault05"
+                    <input name="adress_street" type="text" class="form-control" id="validationDefault04"
                            placeholder="Adress" >
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="validationDefault05">Zip</label>
-                    <input name="adress_zip" type="text" class="form-control" id="validationDefault05" placeholder="Zip"
-                           >
+                    <input name="adress_zip" type="text" class="form-control" id="validationDefault05" placeholder="Zip">
                 </div>
             </div>
             <div class="form-group">
@@ -66,9 +67,9 @@
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Prefered Language</label>
                     <select name="prefered_language" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
                         <option selected>Choose...</option>
-                        <option value="1">English</option>
-                        <option value="2">French</option>
-                        <option value="3">Czech</option>
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                        <option value="Czech">Czech</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
