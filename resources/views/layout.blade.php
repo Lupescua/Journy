@@ -184,7 +184,7 @@
     <a class="nav-link" href="/">
     <img id="logo" src="\img\profile_picture_green.jpg" width="30" height="30" alt="Logo">
     </a>
-    <p>&copy; 2018 Journy All rights reserved
+    <p>&copy; 2018 Journy - All rights reserved
     </div>
     </footer>
 </body>
