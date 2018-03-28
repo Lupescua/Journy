@@ -1084,7 +1084,7 @@
             if (!("undefined" != typeof FormData && t instanceof FormData)) try {
               return JSON.stringify(t).length
             } catch (n) {
-              return
+
             }
           }
         }
@@ -1391,8 +1391,8 @@
 
   <!-- Snowplow starts plowing -->
   <script type="text/javascript">
-    ;
-    (function (p, l, o, w, i, n, g) {
+
+      (function (p, l, o, w, i, n, g) {
       if (!p[i]) {
         p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
         p.GlobalSnowplowNamespace.push(i);
@@ -22248,7 +22248,7 @@
       if (acceptButton) {
         acceptButton.click();
       }
-    }
+    };
     if (window.location.href.indexOf('inAppBrowser') >= 0) {
       window.setAsInAppBrowser()
     }
@@ -22516,7 +22516,7 @@
     function onBannerClick(a) {
       ga("ec:setAction", "promo_click");
       ga("send", "event", "Internal Promotions", "click", a)
-    };
+    }
   </script>
   <script type="text/javascript" id="">
     var isMobile = {
@@ -22558,7 +22558,7 @@
             window.Analytics.track("Orientation", "Change", "portrait", 0, !0)
         }
       }, !1)
-    };
+    }
   </script>
   <script type="text/javascript" id="">
     ! function (b, e, f, g, a, c, d) {
