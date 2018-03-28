@@ -6,7 +6,7 @@
 
 <!-- This is the main jumbotron -->
 <div class="experience_main_picture welconp-3 p-md-5 text-white rounded bg-dark" style="
-    background: url('\img\{{ $experience->image }}');">
+    background-image: url('/img/{{ $experience->image }}');">
     <div class="col-md-6 px-0">
         <h1 class="display-4 font-italic">Long is the night we've been waiting for</h1>
     </div>
