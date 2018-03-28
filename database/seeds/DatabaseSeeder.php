@@ -29,8 +29,6 @@ class DatabaseSeeder extends Seeder
             'user_tags'=>'snow,winter,wolves',
         ]);
 
-
-
         
         $continent = Continent::create([
             'name' => 'asia'
