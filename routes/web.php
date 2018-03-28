@@ -35,3 +35,4 @@ Auth::routes();
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 Route::get('/callback', 'SocialAuthFacebookController@callback');
 Route::get('/modal', 'ModalController@index');
+Route::get('/register', 'RegisterController@index')->name('register');

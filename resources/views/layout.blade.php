@@ -145,7 +145,7 @@
                         <button class="btn btn-primary" id="modal-button">Log in</button>
                     </a>
                     <a class="dropdown-item" href="/new_user">Sign up</a>
-                    <a class="dropdown-item" href="/experience">Another action</a>
+                    <a class="dropdown-item" href="/register">Register</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/">Log out</a>
                 </div>
