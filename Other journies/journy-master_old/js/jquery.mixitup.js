@@ -91,9 +91,8 @@
 				
 				if(settings){
 					$.extend(config, settings);
-				};
-
-				// ADD CONFIG OBJECT TO CONTAINER OBJECT PER INSTANTIATION
+                }
+                // ADD CONFIG OBJECT TO CONTAINER OBJECT PER INSTANTIATION
 				
 				this.config = config;
 				
@@ -104,9 +103,8 @@
 				if ($.support.touch) {
 					config.isTouch = true;
 					config.resetDelay = 350;
-				};
-				
-				// LOCALIZE CONTAINER
+                }
+                // LOCALIZE CONTAINER
 	
 				config.container = $(this);
 				var $cont = config.container;
@@ -132,27 +130,24 @@
 					} else {
 						$(config.sortSelector+'[data-sort='+config.sortOnLoad+']').addClass('active');
 						sortby = config.sortOnLoad, config.sortOnLoad = 'desc';
-					};
-					sort(sortby, order, $cont, config);
-				};
-				
-				// BUILD TRANSITION AND PERSPECTIVE OBJECTS
+                    }
+                    sort(sortby, order, $cont, config);
+                }
+                // BUILD TRANSITION AND PERSPECTIVE OBJECTS
 				
 				for(var i = 0; i<2; i++){
 					var a = i==0 ? a = config.prefix : '';
 					config.transition[a+'transition'] = 'all '+config.transitionSpeed+'ms ease-in-out';
 					config.perspective[a+'perspective'] = config.perspectiveDistance+'px';
 					config.perspective[a+'perspective-origin'] = config.perspectiveOrigin;
-				};
-				
-				// BUILD TRANSITION CLEANER
+                }
+                // BUILD TRANSITION CLEANER
 				
 				for(var i = 0; i<2; i++){
 					var a = i==0 ? a = config.prefix : '';
 					config.clean[a+'transition'] = 'none';
-				};
-	
-				// CHOOSE GRID OR LIST
+                }
+                // CHOOSE GRID OR LIST
 	
 				if(config.layoutMode == 'list'){
 					$cont.addClass(config.listClass);
@@ -160,8 +155,8 @@
 				} else {
 					$cont.addClass(config.gridClass);
 					config.origDisplay = config.targetDisplayGrid;
-				};
-				config.origLayout = config.layoutMode;
+                }
+                config.origLayout = config.layoutMode;
 				
 				// PARSE 'SHOWONLOAD'
 				
@@ -179,9 +174,8 @@
 				if(showOnLoadArray[0]  == 'all'){
 					showOnLoadArray[0] = 'mix_all',
 					config.showOnLoad = 'mix_all';
-				};
-				
-				// FADE IN 'SHOWONLOAD'
+                }
+                // FADE IN 'SHOWONLOAD'
 				
 				var $showOnLoad = $();
 				$.each(showOnLoadArray, function(){
@@ -194,8 +188,8 @@
 						$t.css('display',config.targetDisplayList);
 					} else {
 						$t.css('display',config.targetDisplayGrid);
-					};
-					$t.css(config.transition);
+                    }
+                    $t.css(config.transition);
 				});
 				
 				// WRAP FADE-IN TO PREVENT RACE CONDITION
@@ -219,9 +213,8 @@
 								display: config.targetDisplayGrid,
 								opacity: 1
 							});
-						};
-						
-						// FIRE "ONMIXLOAD" CALLBACK
+                        }
+                        // FIRE "ONMIXLOAD" CALLBACK
 						
 						config.mixing = false;
 
@@ -231,9 +224,8 @@
 							// UPDATE CONFIG IF DATA RETURNED
 
 							config = output ? output : config;
-						};
-						
-					},config.transitionSpeed);
+                        }
+                    },config.transitionSpeed);
 				},10);
 				
 				// PRESET ACTIVE FILTER
@@ -257,17 +249,15 @@
 							$t.addClass('active');
 						} else {
 							if(sortby != 'random')return false;
-						};
-						
-						$cont.find(config.targetSelector).each(function(){
+                        }
+                        $cont.find(config.targetSelector).each(function(){
 							config.startOrder.push($(this));
 						});
 				
 						goMix(config.filter,sortby,order,$cont, config);
-				
-					};
-				
-				});
+
+}
+                });
 
 				// BIND FILTER CLICK HANDLERS
 
@@ -309,17 +299,15 @@
 								
 								$t.addClass('active');
 								config.filter = config.filter+' '+thisFilter;
-								
-							};
-						};
-						
-						// GO MIX
+
+}
+                        }
+                        // GO MIX
 						
 						goMix(config.filter, null, null, $cont, config);
 
-					};
-				
-				});
+}
+                });
 					
 			});
 		},
@@ -332,8 +320,8 @@
 				if(config.layoutMode != 'grid'){
 					config.layoutMode = 'grid';
 					goMix(config.filter, null, null, $(this), config);
-				};
-			});
+                }
+            });
 		},
 	
 		// "TOLIST" METHOD
@@ -344,8 +332,8 @@
 				if(config.layoutMode != 'list'){
 					config.layoutMode = 'list';
 					goMix(config.filter, null, null, $(this), config);
-				};
-			});
+                }
+            });
 		},
 	
 		// "FILTER" METHOD
@@ -357,8 +345,8 @@
 					$(config.filterSelector).removeClass('active');
 					$(config.filterSelector+'[data-filter="'+arg+'"]').addClass('active');
 					goMix(arg, null, null, $(this), config);
-				};
-			});	
+                }
+            });
 		},
 	
 		// "SORT" METHOD
@@ -375,15 +363,15 @@
 					} else {
 						$(config.sortSelector+'[data-sort="'+args+'"]').addClass('active');
 						var sortby = args, order = 'desc';
-					};
-					$t.find(config.targetSelector).each(function(){
+                    }
+                    $t.find(config.targetSelector).each(function(){
 						config.startOrder.push($(this));
 					});
 					
 					goMix(config.filter,sortby,order, $t, config);
-				
-				};
-			});
+
+}
+            });
 		},
 		
 		// "MULTIMIX" METHOD
@@ -407,11 +395,11 @@
 						$t.find(config.targetSelector).each(function(){
 							config.startOrder.push($(this));
 						});
-					};
-					config.layoutMode = multiOut.layoutMode;
+                    }
+                    config.layoutMode = multiOut.layoutMode;
 					goMix(multiOut.filter,multiOut.sort,multiOut.order, $t, config);
-				};
-			});
+                }
+            });
 		},
 		
 		// "REMIX" METHOD
@@ -430,8 +418,8 @@
 					$(config.filterSelector).removeClass('active');
 					$(config.filterSelector+'[data-filter="'+arg+'"]').addClass('active');
 					goMix(arg, null, null, $t, config);
-				};
-			});
+                }
+            });
 		}
 	};
 	
@@ -442,8 +430,8 @@
 			return methods[method].apply( this, Array.prototype.slice.call(arguments,1));
 		} else if (typeof method === 'object' || ! method){
 			return methods.init.apply( this, arguments );
-		};
-	};
+        }
+    };
 	
 	/* ==== THE MAGIC ==== */
 	
@@ -466,9 +454,8 @@
 			// UPDATE CONFIG IF DATA RETURNED
 			
 			config = output ? output : config;
-		};
-		
-		// SHORT LOCAL VARS
+        }
+        // SHORT LOCAL VARS
 		
 		var speed = config.transitionSpeed;
 		
@@ -480,9 +467,8 @@
 			config.transition[a+'transform'] = a+'translate3d(0,0,0)';
 			config.perspective[a+'perspective'] = config.perspectiveDistance+'px';
 			config.perspective[a+'perspective-origin'] = config.perspectiveOrigin;
-		};
-		
-		// CACHE TARGET ELEMENTS FOR QUICK ACCESS
+        }
+        // CACHE TARGET ELEMENTS FOR QUICK ACCESS
 		
 		var mixSelector = config.targetSelector,
 		$targets = $cont.find(mixSelector);
@@ -509,13 +495,12 @@
 		if(config.easing == 'windback'){
 			config.easing = 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
 			config.easingFallback = 'cubic-bezier(0.175, 0.885, 0.320, 1)'; // Fall-back for old webkit, with no values > 1 or < 1
-		};
-		if(config.easing == 'windup'){
+        }
+        if(config.easing == 'windup'){
 			config.easing = 'cubic-bezier(0.6, -0.28, 0.735, 0.045)',
 			config.easingFallback = 'cubic-bezier(0.6, 0.28, 0.735, 0.045)';
-		};
-		
-		// USE LIST SPECIFIC EFFECTS IF DECLARED
+        }
+        // USE LIST SPECIFIC EFFECTS IF DECLARED
 		
 		var effectsOut = config.layoutMode == 'list' && config.listEffects != null ? config.listEffects : config.effects;
 	
@@ -529,9 +514,8 @@
 			config.rotateX = effectsOut.indexOf('rotateX') > -1 ? 'rotateX(90deg)' : '';
 			config.blur = effectsOut.indexOf('blur') > -1 ? 'blur(8px)' : '';
 			config.grayscale = effectsOut.indexOf('grayscale') > -1 ? 'grayscale(100%)' : '';
-		};
-		
-		// DECLARE NEW JQUERY OBJECTS FOR GROUPING
+        }
+        // DECLARE NEW JQUERY OBJECTS FOR GROUPING
 		
 		var $show = $(), 
 		$hide = $(),
@@ -555,9 +539,8 @@
 			$.each(filter,function(i){
 				filterArray[i] = buildFilterArray(this);
 			});
-		};
-
-		// "OR" LOGIC (DEFAULT)
+        }
+        // "OR" LOGIC (DEFAULT)
 		
 		if(config.filterLogic == 'or'){
 			
@@ -582,8 +565,8 @@
 						// ELSE IF HAS NO FILTERS, ADD TO "HIDE" OBJECT
 						} else {
 							$hide = $hide.add($t);
-						};
-					} else {
+                        }
+                    } else {
 						
 						var pass = 0;
 						// FOR EACH DIMENSION
@@ -592,24 +575,23 @@
 							if(this.length){
 								if($t.is('.'+this.join(', .'))){
 									pass++
-								};
-							} else if(pass > 0){
+                                }
+                            } else if(pass > 0){
 								pass++;
-							};
-						});
+                            }
+                        });
 						// IF PASSES ALL DIMENSIONS, SHOW
 						if(pass == filterArray.length){
 							$show = $show.add($t);
 						// ELSE HIDE
 						} else {
 							$hide = $hide.add($t);
-						};
-					};
-				});
-			
-			};
-	
-		} else {
+                        }
+                    }
+                });
+
+}
+        } else {
 			
 		// "AND" LOGIC
 			
@@ -620,9 +602,8 @@
 			// ADD "MIX_HIDE" CLASS TO EVERYTHING ELSE
 			
 			$hide = $hide.add($par.find(mixSelector+':not(.'+filterArray.join('.')+'):visible'));
-		};
-		
-		// GET TOTAL NUMBER OF ELEMENTS TO SHOW
+        }
+        // GET TOTAL NUMBER OF ELEMENTS TO SHOW
 		
 		var total = $show.length;
 		
@@ -640,8 +621,8 @@
 			if($t.css('display') != 'none'){
 				$tohide = $tohide.add($t);
 				$pre = $pre.add($t);
-			};
-		});
+            }
+        });
 		
 		// IF ALL ELEMENTS ARE ALREADY SHOWN AND THERE IS NOTHING TO HIDE, AND NOT PERFORMING A LAYOUT CHANGE OR SORT:
 		
@@ -667,17 +648,15 @@
 						$cont.addClass(config.gridClass);
 						$cont.removeClass(config.listClass);
 						$pre.css('display',config.targetDisplayGrid);
-					};
-					
-					// THEN CLEAN UP AND GO HOME
+                    }
+                    // THEN CLEAN UP AND GO HOME
 
 					resetFilter();
 					return false;
 				}
-			};
-		};
-		
-		// GET CONTAINER'S STARTING HEIGHT
+            }
+        }
+        // GET CONTAINER'S STARTING HEIGHT
 
 		config.origHeight = $par.height();
 		
@@ -699,8 +678,8 @@
 					$toshow = $toshow.add($t)
 				} else {
 					$pre = $pre.add($t);
-				};
-			});
+                }
+            });
 	
 			// IF NON-ANIMATED LAYOUT MODE TRANSITION:
 		
@@ -716,20 +695,17 @@
 					$cont.addClass(config.gridClass);
 					$cont.removeClass(config.listClass);
 					$pre.css('display',config.targetDisplayGrid);
-				};
-				
-				resetFilter();
+                }
+                resetFilter();
 				return false;
-			};
-			
-			// IF IE, FUCK OFF, AND THEN CLEAN UP AND GO HOME
+            }
+            // IF IE, FUCK OFF, AND THEN CLEAN UP AND GO HOME
 		
 			if(!window.atob){
 				resetFilter();
 				return false;
-			};
-			
-			// OVERRIDE ANY EXISTING TRANSITION TIMING FOR CALCULATIONS
+            }
+            // OVERRIDE ANY EXISTING TRANSITION TIMING FOR CALCULATIONS
 			
 			$targets.css(config.clean);
 			
@@ -750,9 +726,8 @@
 				$cont.addClass(config.gridClass);
 				$cont.removeClass(config.listClass);
 				$toshow.css('display',config.targetDisplayGrid);
-			};
-			
-			// FOR EACH ELEMENT NOW SHOWN, ADD ITS INTERMEDIATE POSITION TO 'SHOWINTERPOS' ARRAY
+            }
+            // FOR EACH ELEMENT NOW SHOWN, ADD ITS INTERMEDIATE POSITION TO 'SHOWINTERPOS' ARRAY
 	
 			$toshow.each(function(){
 				this.data.showInterPos = $(this).offset();
@@ -777,24 +752,22 @@
 				$pre.css('display',config.targetDisplayList);
 			} else {
 				$pre.css('display',config.targetDisplayGrid);
-			};
-			
-			// IF A SORT ARGUMENT HAS BEEN SENT, RUN SORT FUNCTION SO OBJECTS WILL MOVE TO THEIR FINAL ORDER
+            }
+            // IF A SORT ARGUMENT HAS BEEN SENT, RUN SORT FUNCTION SO OBJECTS WILL MOVE TO THEIR FINAL ORDER
 			
 			if(sortby){
-				sort(sortby, order, $cont, config);	
-			};
-			
-			// IF VISIBLE SORT ORDER IS THE SAME (WHICH WOULD NOT TRIGGER A TRANSITION EVENT)
+				sort(sortby, order, $cont, config);
+
+}
+            // IF VISIBLE SORT ORDER IS THE SAME (WHICH WOULD NOT TRIGGER A TRANSITION EVENT)
 		
 			if(sortby && compareArr(config.origSort, config.checkSort)){
 				
 				// THEN CLEAN UP AND GO HOME
 				resetFilter();
 				return false;
-			};
-			
-			// TEMPORARILY HIDE ALL SHOWN ELEMENTS TO HIDE
+            }
+            // TEMPORARILY HIDE ALL SHOWN ELEMENTS TO HIDE
 
 			$tohide.hide();
 			
@@ -820,9 +793,8 @@
 			
 			if(sortby){
 				sort('reset', null, $cont, config);
-			};
-			
-			// RE-HIDE ALL ELEMENTS TEMPORARILY SHOWN
+            }
+            // RE-HIDE ALL ELEMENTS TEMPORARILY SHOWN
 			
 			$toshow.hide();
 			
@@ -839,9 +811,8 @@
 			} else {
 				$cont.removeClass(config.listClass);
 				$toshow.css('display', config.targetDisplayGrid);
-			};
-			
-			// IF WE ARE ANIMATING CONTAINER, RESET IT TO ITS STARTING HEIGHT
+            }
+            // IF WE ARE ANIMATING CONTAINER, RESET IT TO ITS STARTING HEIGHT
 		
 			if(config.resizeContainer)$par.css('height', config.origHeight+'px');
 	
@@ -853,9 +824,8 @@
 				var a = i==0 ? a = config.prefix : '';
 				toShowCSS[a+'transform'] = config.scale+' '+config.rotateX+' '+config.rotateY+' '+config.rotateZ;
 				toShowCSS[a+'filter'] = config.blur+' '+config.grayscale;
-			};
-			
-			$toshow.css(toShowCSS);
+            }
+            $toshow.css(toShowCSS);
 	
 			// FOR EACH PRE-EXISTING ELEMENT, SUBTRACT ITS INTERMEDIATE POSITION FROM ITS ORIGINAL POSITION 
 			// TO GET ITS STARTING OFFSET
@@ -870,14 +840,13 @@
 				} else {
 					data.preTX = data.origPos.left - data.preInterPos.left;
 					data.preTY = data.origPos.top - data.preInterPos.top;
-				};
-				var preCSS = {};
+                }
+                var preCSS = {};
 				for(var i = 0; i<2; i++){
 					var a = i==0 ? a = config.prefix : '';
 					preCSS[a+'transform'] = 'translate('+data.preTX+'px,'+data.preTY+'px)';
-				};
-				
-				$t.css(preCSS);	
+                }
+                $t.css(preCSS);
 			});
 			
 			// ADD/REMOVE GRID AND LIST CLASSES FROM CONTAINER
@@ -888,9 +857,8 @@
 			} else {
 				$cont.addClass(config.gridClass);
 				$cont.removeClass(config.listClass);
-			};
-			
-			// WRAP ANIMATION FUNCTIONS IN 10ms TIMEOUT TO PREVENT RACE CONDITION
+            }
+            // WRAP ANIMATION FUNCTIONS IN 10ms TIMEOUT TO PREVENT RACE CONDITION
 			
 			var delay = setTimeout(function(){
 		
@@ -902,11 +870,10 @@
 						var a = i==0 ? a = config.prefix : '';
 						containerCSS[a+'transition'] = 'all '+speed+'ms ease-in-out';
 						containerCSS['height'] = config.newHeight+'px';
-					};
-					$par.css(containerCSS);
-				};
-	
-				// BEGIN FADING IN/OUT OF ALL ELEMENTS TO SHOW/HIDE
+                    }
+                    $par.css(containerCSS);
+                }
+                // BEGIN FADING IN/OUT OF ALL ELEMENTS TO SHOW/HIDE
 				$tohide.css('opacity',config.fade);
 				$toshow.css('opacity',1);
 	
@@ -928,9 +895,8 @@
 						toShowCSS[a+'transition-delay'] = '0';
 						toShowCSS[a+'transform'] = 'translate('+data.tX+'px,'+data.tY+'px)';
 						toShowCSS[a+'filter'] = 'none';
-					};
-					
-					$(this).css('-webkit-transition', 'all '+speed+'ms '+config.easingFallback).css(toShowCSS);
+                    }
+                    $(this).css('-webkit-transition', 'all '+speed+'ms '+config.easingFallback).css(toShowCSS);
 				});
 				
 				// FOR EACH PRE-EXISTING ELEMENT, IF IT HAS A FINAL POSITION, CALCULATE 
@@ -938,7 +904,7 @@
 				// ALSO ADD SPEED AND EASING
 				
 				$pre.each(function(){
-					var data = this.data
+					var data = this.data;
 					data.tX = data.finalPrePos.left != 0 ? data.finalPrePos.left - data.preInterPos.left : 0;
 					data.tY = data.finalPrePos.left != 0 ? data.finalPrePos.top - data.preInterPos.top : 0;
 					
@@ -947,9 +913,8 @@
 						var a = i==0 ? a = config.prefix : '';
 						preCSS[a+'transition'] = 'all '+speed+'ms '+config.easing;
 						preCSS[a+'transform'] = 'translate('+data.tX+'px,'+data.tY+'px)';
-					};
-					
-					$(this).css('-webkit-transition', 'all '+speed+'ms '+config.easingFallback).css(preCSS);
+                    }
+                    $(this).css('-webkit-transition', 'all '+speed+'ms '+config.easingFallback).css(preCSS);
 				});
 		
 				// BEGIN TRANSFORMS ON ALL ELEMENTS TO BE HIDDEN
@@ -961,9 +926,8 @@
 					toHideCSS[a+'transform'] = config.scale+' '+config.rotateX+' '+config.rotateY+' '+config.rotateZ;
 					toHideCSS[a+'filter'] = config.blur+' '+config.grayscale;
 					toHideCSS['opacity'] = config.fade;
-				};
-				
-				$tohide.css(toHideCSS);
+                }
+                $tohide.css(toHideCSS);
 				
 				// ALL ANIMATIONS HAVE NOW BEEN STARTED, NOW LISTEN FOR TRANSITION END:
 				
@@ -977,20 +941,17 @@
 						
 							if($(e.target).hasClass(mixSelector.replace('.',''))){
 								resetFilter();
-							};
-						
-						} else {
+                            }
+                        } else {
 							
 						// IF MIXSELECTOR IS A TAG
 						
 							if($(e.target).is(mixSelector)){
 								resetFilter();
-							};
-							
-						};
-						
-					};
-				});	
+                            }
+                        }
+                    }
+                });
 	
 			},10);
 			
@@ -999,8 +960,8 @@
 			config.failsafe = setTimeout(function(){
 				if(config.mixing){
 					resetFilter();
-				};
-			}, speed + 400);
+                }
+            }, speed + 400);
 	
 		} else {
 			
@@ -1015,9 +976,8 @@
 			if(!window.atob){
 				resetFilter();
 				return false;
-			};
-			
-			// GROUP ALL ELEMENTS TO HIDE INTO JQUERY OBJECT
+            }
+            // GROUP ALL ELEMENTS TO HIDE INTO JQUERY OBJECT
 			
 			$tohide = $hide;
 			
@@ -1037,11 +997,10 @@
 						var a = i==0 ? a = config.prefix : '';
 						containerCSS[a+'transition'] = 'height '+speed+'ms ease-in-out';
 						containerCSS['height'] = config.minHeight+'px';
-					};
-					$par.css(containerCSS);
-				};
-	
-				// APPLY TRANSITION TIMING TO ALL TARGET ELEMENTS
+                    }
+                    $par.css(containerCSS);
+                }
+                // APPLY TRANSITION TIMING TO ALL TARGET ELEMENTS
 				
 				$targets.css(config.transition);
 				
@@ -1061,9 +1020,8 @@
 						toHideCSS[a+'transform'] = config.scale+' '+config.rotateX+' '+config.rotateY+' '+config.rotateZ;
 						toHideCSS[a+'filter'] = config.blur+' '+config.grayscale;
 						toHideCSS['opacity'] = config.fade;
-					};
-
-					$tohide.css(toHideCSS);
+                    }
+                    $tohide.css(toHideCSS);
 					
 					// ALL ANIMATIONS HAVE NOW BEEN STARTED, NOW LISTEN FOR TRANSITION END:
 
@@ -1071,20 +1029,18 @@
 						if (e.originalEvent.propertyName.indexOf('transform') > -1 || e.originalEvent.propertyName.indexOf('opacity') > -1){
 							$cont.addClass(config.failClass);
 							resetFilter();
-						};
-					});
+                        }
+                    });
 		
 				} else {
 					
 				// ELSE, WE'RE DONE MIXING
 				 	
 					config.mixing = false;
-				};
-	
-			}, 10);
-		}; 
-		
-		// CLEAN UP AND RESET FUNCTION
+                }
+            }, 10);
+        }
+        // CLEAN UP AND RESET FUNCTION
 
 		function resetFilter(){
 			
@@ -1096,9 +1052,8 @@
 			
 			if(sortby){
 				sort(sortby, order, $cont, config);
-			};
-			
-			// EMPTY SORTING ARRAYS
+            }
+            // EMPTY SORTING ARRAYS
 		
 			config.startOrder = [], config.newOrder = [], config.origSort = [], config.checkSort = [];
 		
@@ -1115,9 +1070,8 @@
 					display: 'none',
 					opacity: '0'
 				});
-			};
-			
-			// REMOVE HEIGHT FROM CONTAINER ONLY IF RESIZING
+            }
+            // REMOVE HEIGHT FROM CONTAINER ONLY IF RESIZING
 			
 			var remH = config.resizeContainer ? 'height' : '';
 			
@@ -1136,8 +1090,8 @@
 			} else {
 				$show.css({display:config.targetDisplayGrid, opacity:'1'});
 				config.origDisplay = config.targetDisplayGrid;
-			};
-			config.origLayout = config.layoutMode;
+            }
+            config.origLayout = config.layoutMode;
 				
 			var wait = setTimeout(function(){
 				
@@ -1157,12 +1111,11 @@
 					// UPDATE CONFIG IF DATA RETURNED
 				
 					config = output ? output : config;
-				};
-			});
-		};
-	};
-	
-	// SORT FUNCTION
+                }
+            });
+        }
+    }
+    // SORT FUNCTION
 	
 	function sort(sortby, order, $cont, config){
 
@@ -1176,19 +1129,17 @@
 		  	if (sortAttrA > sortAttrB)
 		    	return 1;
 		  	return 0;
-		};
-		
-		// REBUILD DOM
+        }
+        // REBUILD DOM
 
 		function rebuild(element){
 			if(order == 'asc'){
 				$sortWrapper.prepend(element).prepend(' ');
 			} else {
 				$sortWrapper.append(element).append(' ');
-			};
-		};
-		
-		// RANDOMIZE ARRAY
+            }
+        }
+        // RANDOMIZE ARRAY
 
 		function arrayShuffle(oldArray){
 			var newArray = oldArray.slice();
@@ -1199,11 +1150,11 @@
 				var t = newArray[i];
 		  		newArray[i] = newArray[p];
 			  	newArray[p] = t;
-		 	};
-			return newArray; 
-		};
-		
-		// SORT
+            }
+            return newArray;
+
+}
+        // SORT
 		
 		$cont.find(config.targetSelector).wrapAll('<div class="mix_sorter"/>');
 		
@@ -1215,11 +1166,8 @@
 				config.origSort.push($(this).parent().html().replace(/\s+/g, ''));
 				$(this).unwrap();
 			});
-		};
-		
-		
-		
-		$sortWrapper.empty();
+        }
+        $sortWrapper.empty();
 		
 		if(sortby == 'reset'){
 			$.each(config.startOrder,function(){
@@ -1232,8 +1180,8 @@
 		} else if(sortby == 'random'){
 			if(!config.newOrder.length){
 				config.newOrder = arrayShuffle(config.startOrder);
-			};
-			$.each(config.newOrder,function(){
+            }
+            $.each(config.newOrder,function(){
 				$sortWrapper.append(this).append(' ');
 			});	
 		} else if(sortby == 'custom'){
@@ -1246,20 +1194,19 @@
 			if(typeof config.origOrder[0].attr(sortby) === 'undefined'){
 				console.log('No such attribute found. Terminating');
 				return false;
-			};
-			
-			if(!config.newOrder.length){
+            }
+            if(!config.newOrder.length){
 				$.each(config.origOrder,function(){
 					config.newOrder.push($(this));
 				});
 				config.newOrder.sort(compare);
-			};
-			$.each(config.newOrder,function(){
+            }
+            $.each(config.newOrder,function(){
 				rebuild(this);
 			});
-			
-		};
-		config.checkSort = [];
+
+}
+        config.checkSort = [];
 		$sortWrapper.find(config.targetSelector+':visible').each(function(i){
 			var $t = $(this);
 			if(i == 0){
@@ -1267,28 +1214,26 @@
 				// PREVENT COMPARE RETURNING FALSE POSITIVES ON ELEMENTS WITH NO CLASS/ATTRIBUTES
 				
 				$t.attr('data-checksum','1');
-			};
-			$t.wrap('<s/>');
+            }
+            $t.wrap('<s/>');
 			config.checkSort.push($t.parent().html().replace(/\s+/g, ''));
 			$t.unwrap();
 		});
 		
 		$cont.find(config.targetSelector).unwrap();
-	};
-	
-	// FIND VENDOR PREFIX
+    }
+    // FIND VENDOR PREFIX
 
 	function prefix(el) {
 	    var prefixes = ["Webkit", "Moz", "O", "ms"];
 	    for (var i = 0; i < prefixes.length; i++){
 	        if (prefixes[i] + "Transition" in el.style){
 	            return prefixes[i];
-	        };
-	    };
-	    return "transition" in el.style ? "" : false;
-	};
-	
-	// REMOVE SPECIFIC STYLES
+            }
+        }
+        return "transition" in el.style ? "" : false;
+    }
+    // REMOVE SPECIFIC STYLES
 	
 	$.fn.removeStyle = function(style){
 		return this.each(function(){
@@ -1312,13 +1257,12 @@
 	    for (var i = 0; i < b.length; i++){
 	        if (a[i].compare) { 
 	            if (!a[i].compare(b[i])) return false;
-	        };
-	        if (a[i] !== b[i]) return false;
-	    };
-	    return true;
-	};
-	
-	// BUILD FILTER ARRAY(S)
+            }
+            if (a[i] !== b[i]) return false;
+        }
+        return true;
+    }
+    // BUILD FILTER ARRAY(S)
 	
 	function buildFilterArray(str){
 		// CLEAN FILTER STRING
@@ -1331,7 +1275,5 @@
 		});
 		if(arr[0] == "")arr.shift(); 
 		return arr;
-	};
-
-	
+    }
 })(jQuery);
