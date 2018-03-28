@@ -36,13 +36,20 @@
 .thumbnail{
     background: white;
     width: 100%;
-
 }
 
-.form-control{
+.form-rounded{
     border-radius: 20px;
     margin: 14px;
     margin-right: 0px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color .15s
 }
 
 .btn-outline-light{
@@ -53,13 +60,25 @@
 }
 
 .form-inline {
-    position: relative;
+    justify-content: center;
     padding: 10px;
     margin: 0 auto;
-
 }
 
 .dx{
     /* color: rgb(245, 230, 21); */
     color: rgb(0, 0, 0);
+}
+
+.btn-secondary{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+
+
+}
+
+.links {
+    /* display: flex; */
+    text-align: center;
 }

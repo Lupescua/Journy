@@ -26,6 +26,9 @@ Route::get('/booking/{step?}', 'BookingController@index')->name('bookingstep') ;
 
 
 Route::get('/new_user', 'UserController@index') ;
+Route::post('/new_user', 'UserController@store') ;
+
+Route::get('/new_user/{id}', 'UserController@show') ;
 
 Auth::routes();
 

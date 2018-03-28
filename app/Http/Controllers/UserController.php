@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Experience;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-
-        return view('user.new_user_basic_info');
+        return view('user.user_create');
     }
 
     /**
@@ -25,7 +25,15 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        return view('user.user_create');
+        User::create('users', function (Blueprint $table) { // schema for table 'users'
+            $table->increments('id');                         // add column 'id' that will be AI PK
+            $table->string('name');                           // create a string column 'name'
+            $table->string('email')->unique();                // create a string column 'email' which will be unique
+            $table->string('password');                       // create a string column 'password'
+            $table->rememberToken();                          // add a special remember token column
+            $table->timestamps();                             // add common columns 'created_at' and 'updated_at'
+        });
     }
     /**
      * Store a newly created resource in storage.
@@ -33,16 +41,26 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        $this->validate(request(),[
-            'title'=>'required',
-            'body' =>'required'
-        ]);
-        //requests the title and body and saves it to the DB
-        User::create(request(['title','body']));
-        //redirect to home page
-        return redirect('/');
+        if($request->agree_to_terms != true){
+            $user =  new User();
+            $user->name = $request->name;
+            $user->password = 'set_from_controller';
+            $user->email = $request->email;
+            $user->adress_country = $request->adress_country;
+            $user->adress_city = $request->adress_city;
+            $user->adress_state = $request->adress_state;
+            $user->adress_street = $request->adress_street;
+            $user->adress_zip = $request->adress_zip;
+            $user->prefered_language = $request->prefered_language;
+            $user->user_tags = $request->user_tags;
+            $user->save();
+            //redirect to show page
+            return redirect(action('UserController@show',[$user->id]));
+        }
+            return redirect(action('UserController@index'));
+
     }
     /**
      * Display the specified resource.
@@ -52,8 +70,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return view('user.user_page',compact('user'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

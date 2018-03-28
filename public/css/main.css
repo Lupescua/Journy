@@ -18,3 +18,7 @@ body {
 .dropdown-item:hover {
     text-decoration: none;
 }
+
+#logo{
+    border-radius: 25%;
+}

@@ -7,8 +7,9 @@ Booking
 @section('content')
     <div class="breadcrumb booking-header">
         <a href="{{route('bookingstep')}}" class="active">1. Review guest requirements</a>
-        <a href="{{route('bookingstep',[2])}}">2. Who is coming</a>
-        <a href="{{route('bookingstep',[3])}}">3. Order Confirmation</a>
+        <a href="{{route('bookingstep',[1])}}">2. Select time period</a>
+        <a href="{{route('bookingstep',[2])}}">3. Personal details</a>
+        <a href="{{route('bookingstep',[3])}}">4. Payment details</a>
     </div>
     <br />
     <br />
@@ -18,17 +19,16 @@ Booking
   <div class="d-flex row">
     <div class="col-sm-6 col-md-6">
 
-<h1>
+    <h1>
       <strong>
-    @yield('header')
-    </strong>
+      @yield('header')
+      </strong>
     </h1>
 
     @yield('bookingcontent')
 
 
-
-<button type="submit" class="booking-style pull-right">Forward</button>
+<button type="submit" class="pull-right">Forward</button>
     </div>
     <div class="col-sm-6 col-md-6 details_box">
     <div class="d-flex row">
@@ -61,7 +61,7 @@ Booking
   </div>
 </div>
 
-
-@yield('details')
-
 @endsection
+
+
+
