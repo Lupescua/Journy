@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('title')
+Register
+@endsection
+
 @section('content')
 <br />
 <div class="container">

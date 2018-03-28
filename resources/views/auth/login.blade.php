@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-Journy-login
+Login
 @endsection
 
 
