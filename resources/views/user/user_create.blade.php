@@ -76,7 +76,7 @@
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Prefered Description</label>
                     <small id="emailHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.</small>
                     <select name="user_tags" class="selectpicker" multiple >
-                        <optgroup label="Condiments" data-max-options="2">
+                        <optgroup label="Historic" data-max-options="2">
                             <option>Mustard</option>
                             <option>Ketchup</option>
                             <option>Relish</option>

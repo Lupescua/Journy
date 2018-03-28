@@ -25,6 +25,8 @@ class UserController extends Controller
      */
     public function create()
     {
+
+        $continent = $request->input('continent');
         return view('user.user_create');
         User::create('users', function (Blueprint $table) { // schema for table 'users'
             $table->increments('id');                         // add column 'id' that will be AI PK
