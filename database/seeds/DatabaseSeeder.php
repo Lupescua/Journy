@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         \App\Experience::create([
             'name'=>'Long is the night we\'ve been waiting for',
             'user_id'=>'1',
-            'image'=>'https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg',
+            'image'=>'eastwatch.jpg',
             'rating'=>'3',
             'main_tags'=>'dragons,ice,fire',
             'people_who_did_it'=>'55',
