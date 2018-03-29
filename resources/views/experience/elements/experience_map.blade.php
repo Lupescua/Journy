@@ -19,8 +19,8 @@
 
                 var marker = new google.maps.Marker({
                     position: {
-                        lat: 50.0745,
-                        lng: 14.431
+                        lat: {{ $experience->gps_lat }},
+                        lng: {{ $experience->gps_lng }}
                         // lat: location.coords.latitude,
                         // lng: location.coords.longitude
                     },

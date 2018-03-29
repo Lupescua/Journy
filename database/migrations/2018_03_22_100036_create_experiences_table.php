@@ -40,8 +40,8 @@ class CreateExperiencesTable extends Migration
             $table->text('what_we_provide')->nullable();
             $table->text('who_can_come')->nullable();
             $table->text('where_we_be')->nullable();
-            $table->float('gps_lat')->nullable();
-            $table->float('gps_lng')->nullable();
+            $table->string('gps_lat')->nullable();
+            $table->string('gps_lng')->nullable();
             $table->timestamps();
         });
     }

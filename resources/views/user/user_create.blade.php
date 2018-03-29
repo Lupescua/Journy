@@ -77,11 +77,11 @@
                     <small id="emailHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.</small>
                     <select name="user_tags" class="selectpicker" multiple >
                         <optgroup label="Historic" data-max-options="2">
-                            <option>Mustard</option>
+                            <option value="">Mustard</option>
                             <option>Ketchup</option>
                             <option>Relish</option>
                         </optgroup>
-                        <optgroup label="Breads" data-max-options="2">
+                        <optgroup label="Views" data-max-options="2">
                             <option>Plain</option>
                             <option>Steamed</option>
                             <option>Toasted</option>
