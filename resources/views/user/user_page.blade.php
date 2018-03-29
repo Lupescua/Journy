@@ -145,7 +145,7 @@
                     <div class="row">
 
                         <button class="btn btn-primary" type="submit">Next</button>
-                        <button class="btn btn-primary" href="">View experiences</button>
+                        <button class="btn btn-primary" href="action('UserController@show',[$user->id])">View experiences</button>
                     </div>
                 </form>
             </section>
