@@ -21,8 +21,9 @@ Route::get('/location', 'LocationController@index') ;
 Route::get('/location_old', 'LocationController@index2') ;
 Route::get('/login', 'LoginController@index')->name('login') ;
 
-Route::get('/new_experience', 'ExperienceController@create') ;
-Route::get('/experience/{name?}', 'ExperienceController@index') ;
+Route::get('/new_experience', 'ExperienceController@index') ;
+Route::post('/new_experience', 'ExperienceController@store') ;
+Route::get('/experience/{name?}', 'ExperienceController@create') ;
 
 Route::get('/booking/{step?}', 'BookingController@index')->name('bookingstep') ;
 
