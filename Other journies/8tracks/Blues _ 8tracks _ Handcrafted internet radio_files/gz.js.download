@@ -1,0 +1,1 @@
+webengage.options('isGzip', false)

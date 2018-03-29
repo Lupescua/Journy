@@ -37,3 +37,10 @@ Auth::routes();
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 Route::get('/callback', 'SocialAuthFacebookController@callback');
 Route::get('/modal', 'ModalController@index');
+
+Route::get('/privacy_policy', function () {
+    return view('user.privacy_policy');
+});
+Route::get('/terms_and_conditions', function () {
+    return view('user.terms_and_conditions');
+});
