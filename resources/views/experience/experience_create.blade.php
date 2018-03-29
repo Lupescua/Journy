@@ -10,8 +10,8 @@
             <div class="form-row">
 
                 <div class="col-md-3 mb-3">
-                    <label for="validationDefault05">Region</label>
-                <select name="continent_region" class="selectpicker form-control" required>
+                    <label for="inputContinent_region">Region</label>
+                <select name="continent_region" class="selectpicker form-control" id="inputContinent_region" required>
                     <optgroup label="Asia">
                         <option value="asia east">East</option>
                         <option value="asia west">West</option>
@@ -31,8 +31,8 @@
                 </div>
 
                 <div class="col-md-3 mb-3">
-                    <label for="inputState">Activity</label>
-                    <select name="activity_id" id="inputState" class="form-control" required>
+                    <label for="inputActivity_id">Activity</label>
+                    <select name="activity_id" id="inputActivity_id" class="form-control" required>
                         <option selected>Choose</option>
                         <option>trekking</option>
                         <option>hunting</option>
@@ -42,40 +42,40 @@
                     </select>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationDefault01">City</label>
-                    <input name="location_id" type="text" class="form-control" id="validationDefault01"
+                    <label for="inputLocation_id">City</label>
+                    <input name="location_id" type="text" class="form-control" id="inputLocation_id"
                            placeholder="Prague"  required>
                 </div>
             </div>
             <div class="">
-                <label for="validationDefault01">Adress</label>
-                <input name="place" type="text" class="form-control" id="validationDefault01"
+                <label for="inputPlace">Adress</label>
+                <input name="place" type="text" class="form-control" id="inputPlace"
                        placeholder="Prague"  >
             </div>
 
             <div class="form-row">
                 <div class="col-md-4 mb-3">
-                    <label for="validationDefault01">Upload experience picture</label>
+                    <label >Upload experience picture</label>
                     <div class="custom-file">
-                        <label class="custom-file-label" for="customFile">Choose file</label>
-                        <input name="image" type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="inputVideo_id">Choose file</label>
+                        <input name="image" type="file" class="custom-file-input" id="inputVideo_id">
                     </div>
                 </div>
                 <div class="col-md-8 mb-3">
-                    <label for="validationDefault01">Video Url</label>
-                    <input name="video_id" type="text" class="form-control" id="validationDefault01"
+                    <label for="inputVideo_id">Video Url</label>
+                    <input name="video_id" type="text" class="form-control" id="inputVideo_id"
                            placeholder="Experience Name" value="www..." required>
                 </div>
             </div>
 
             <div class="form-row">
             <div class="form-group col-md-8 mb-6">
-                <label for="exampleTextarea">Short Experience Description</label>
-                <textarea name="description" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                <label for="inputDescription">Short Experience Description</label>
+                <textarea name="description" class="form-control" id="inputDescription" rows="3"></textarea>
             </div>
             <div class="col-md-4 mb-3">
                 {{--<label class="mr-sm-2" for="inlineFormCustomSelect">Main Tags</label>--}}
-                <small id="emailHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.</small>
+                <small id="tagHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.</small>
                 <select name="user_tags" class="selectpicker" multiple >
                     <optgroup label="Tags" data-max-options="3">
                         <option>Dragon</option>
@@ -97,13 +97,13 @@
             </div>
             <div class="form-row">
                 <div class="col-md-3 mb-3">
-                    <label for="inputAddress">Price</label>
-                    <input name="price" type="text" class="form-control" id="validationDefault04"
+                    <label for="inputPrice">Price</label>
+                    <input name="price" type="text" class="form-control" id="inputPrice"
                            placeholder="22.00" >
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Currency</label>
-                    <select name="currency" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                    <label class="mr-sm-2" for="inputCurrency">Currency</label>
+                    <select name="currency" class="custom-select mr-sm-2" id="inputCurrency" >
                         <option selected>Choose...</option>
                         <option value="English">USD</option>
                         <option value="French">EUR</option>
@@ -114,8 +114,8 @@
 
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Language</label>
-                    <select name="prefered_language" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                    <label class="mr-sm-2" for="inputLanguage">Language</label>
+                    <select name="prefered_language" class="custom-select mr-sm-2" id="inputLanguage" >
                         <option selected>Choose...</option>
                         <option value="English">English</option>
                         <option value="French">French</option>
@@ -123,26 +123,26 @@
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="inputAddress">Maximum number of participants</label>
-                    <input name="max_participants" type="text" class="form-control" id="validationDefault04"
+                    <label for="inputMax_participants">Maximum number of participants</label>
+                    <input name="max_participants" type="text" class="form-control" id="inputMax_participants"
                            placeholder="22.00" >
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="col-md-3 mb-3">
-                    <label for="inputAddress">Duration</label>
-                    <input name="duration" type="text" class="form-control" id="validationDefault04"
+                    <label for="inputDuration">Duration</label>
+                    <input name="duration" type="text" class="form-control" id="inputDuration"
                            placeholder="3.5 hours" >
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="inputAddress">Offered</label>
-                    <input name="offered" type="text" class="form-control" id="validationDefault04"
+                    <label for="inputOffered">Offered</label>
+                    <input name="offered" type="text" class="form-control" id="inputOffered"
                            placeholder="1 meal, Drinks and Equipment" >
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="inputAddress">Sport Level</label>
-                    <select name="sport_level" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                    <label for="inputSport_level">Sport Level</label>
+                    <select name="sport_level" class="custom-select mr-sm-2" id="inputSport_level" >
                         <option selected>Choose...</option>
                         <option value="1">Easy</option>
                         <option value="2">Medium</option>
@@ -153,27 +153,41 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="exampleTextarea">Long Experience Desctiption</label>
-                <textarea name="what_we_do" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                <label for="exampleWhat_we_do">Long Experience Desctiption</label>
+                <textarea name="what_we_do" class="form-control" id="exampleWhat_we_do" rows="4"></textarea>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 mb-6">
-                    <label for="exampleTextarea">Description of Host</label>
-                    <textarea name="about_host" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    <label for="exampleAbout_host">Description of Host</label>
+                    <textarea name="about_host" class="form-control" id="exampleAbout_host" rows="3"></textarea>
                 </div>
                 <div class="form-group col-md-6 mb-6">
-                    <label for="exampleTextarea">Long Experience Desctiption</label>
-                    <textarea name="description" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    <label for="exampleWhat_we_provide">What will the guest gain</label>
+                    <textarea name="what_we_provide" class="form-control" id="exampleWhat_we_provide" rows="3"></textarea>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 mb-6">
-                    <label for="exampleTextarea">Example textarea</label>
-                    <textarea name="description" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    <label for="exampleWho_can_come">Who can come</label>
+                    <textarea name="who_can_come" class="form-control" id="exampleWho_can_come" rows="3"></textarea>
                 </div>
                 <div class="form-group col-md-6 mb-6">
-                    <label for="exampleTextarea">Example textarea</label>
-                    <textarea name="description" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    <label for="exampleWhere_we_be">Where will we meet/Where will we go</label>
+                    <textarea name="where_we_be" class="form-control" id="exampleWhere_we_be" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+
+                <label for="inputCoordinates">Coordinates</label>
+                <div class="col-md-6 mb-6">
+                    <label for="inputLongitude">Longitude</label>
+                    <input name="gps_lng" type="text" class="form-control" id="inputLongitude"
+                           placeholder="14.431" >
+                </div>
+                <div class="col-md-6 mb-6">
+                    <label for="inputLatitude">Latitude</label>
+                    <input name="gps_lat" type="text" class="form-control" id="inputLatitude"
+                           placeholder="50.0745" >
                 </div>
             </div>
             <button class="btn btn-primary" type="submit">Submit</button>

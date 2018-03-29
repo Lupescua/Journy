@@ -73,8 +73,8 @@ class DatabaseSeeder extends Seeder
                         'what_we_provide'=>'Home made cake 󴀁 Home made lemonade 󲀃 Materials for your book 󳀁 Choose from a great variety of old printed materials relating to Czech history and cultureHome made cake 󴀁 Home made lemonade 󲀃 Materials for your book 󳀁 Choose from a great variety of old printed materials relating to Czech history and culture',
                         'who_can_come'=>'Guests ages 12 and up can attend.',
                         'where_we_be'=>'Mordor is not that far, but this is the land of Fire and Ice. We will be camping in the forests of Mithelhime and eat with the Trolls unde the bridge of Happyness. Luckylly, our music will be offered by noneother thatn Tyrion Drake Malfoy and his acompaniament of Jolly Rogers.',
-                        'gps_lng'=>'54343',
-                        'gps_lat'=>'123456',
+                        'gps_lng'=>'14.431',
+                        'gps_lat'=>'50.0745'
                     ]);
 
 
