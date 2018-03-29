@@ -12,7 +12,7 @@ class RegisterController extends Controller
 
 /*
     |--------------------------------------------------------------------------
-    | Register Controller - Jirina coppied form Auth/RegisterController
+    | Register Controller - Jirina coppied form Auth/RegisterController and modified a bit
     |--------------------------------------------------------------------------
     |
     | This controller handles the registration of new users as well as their
@@ -21,7 +21,7 @@ class RegisterController extends Controller
     |
     */
 
-    
+
 
     /**
      * Where to redirect users after registration.
