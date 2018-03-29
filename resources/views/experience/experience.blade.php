@@ -1,5 +1,4 @@
-@extends('../layout') @section('title') !!your experiance
-<!-- In php I need to create a function to dump the info from the get-->
+@extends('../layout') @section('title') {{ $experience->name }}
 @endsection @section('content')
 
 <link rel="stylesheet" href="/css/experience.css">
@@ -61,7 +60,6 @@
             </div>
         </div>
         @include('experience.elements.aside_video')
-                <p>data3you</p>
     </div>
 </div>
 

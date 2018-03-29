@@ -12,11 +12,12 @@ class ExperienceController extends Controller
         return view('experience.experience',compact('experience'));
 
 
+
 //        return view('experience.experience',compact('experiences'));
     }
 
     public function create(){
-        return view('experience.experience');
+        return view('experience.experience_create');
     }
 
     public function store(){

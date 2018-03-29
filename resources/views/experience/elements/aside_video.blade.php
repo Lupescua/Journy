@@ -3,16 +3,16 @@
         <div class="video_time">
             <div class="video">
                 <video id="main-video" preload="metadata" poster="http://www.criticalcommons.org/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/thumbnailImage"
-                    height="360" width="630" playsinline autoplay muted loop src="http://videos.criticalcommons.org/transcoded/http/ccserver.usc.edu/8080/cc/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/webm-low/playmobil-game-of-thrones-2012-mp4.webm">
-                    <source type="video/webm" src="http://videos.criticalcommons.org/transcoded/http/ccserver.usc.edu/8080/cc/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/webm-low/playmobil-game-of-thrones-2012-mp4.webm">
-                    <source type="video/mp4" src="http://videos.criticalcommons.org/transcoded/http/ccserver.usc.edu/8080/cc/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/mp4-low/playmobil-game-of-thrones-2012-mp4.mp4">
+                    height="360" width="630" playsinline autoplay muted loop src="{{ $experience->video_id }}">
+                    {{--<source type="video/webm" src="http://videos.criticalcommons.org/transcoded/http/ccserver.usc.edu/8080/cc/Members/MCIMR/clips/playmobil-game-of-thrones-2012.mp4/webm-low/playmobil-game-of-thrones-2012-mp4.webm">--}}
+                    {{--<source type="video/mp4" src="{{ $experience->video_id }}">--}}
                 </video>
             </div>
 
             <div class="row d-flex justify-content-around">
                 <div class="price">
                     <a href="/booking" class="booking_btn btn btn-info" role="button">Book
-                        <br>USD 22.5</a>
+                        <br>{{ $experience->currency }} {{ $experience->price }}</a>
                 </div>
                 <div class="chose_time">
                     <button class="calendar-toggler calendar_btn btn btn-info" type="button" data-toggle="collapse" data-target="#calendarSupportedContent"

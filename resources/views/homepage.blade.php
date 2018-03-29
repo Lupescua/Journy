@@ -30,8 +30,8 @@
 
 <div class="homepage_top_image jumbotron-fluid">
     <div class="column justify-content-center">
-        <a href="/experience">
-            <img src="https://image.ibb.co/c9OsdH/logo_main.png" alt="logo_main" border="0">
+        <a href="/">
+            <img src="/img/logo_main.png" alt="logo_main" border="0">
         </a>
         <form class="form-inline" style="position:relative" action="{{action('LocationController@index')}}" method="get" >
             <input class="form-rounded  font-weight-bold mr-auto " style="background: #fff; margin-left:auto; margin-right:0;" type="search"
