@@ -25,6 +25,13 @@ class UserController extends Controller
      */
     public function create()
     {
+
+        $pizza  = "piece1 piece2 piece3 piece4 piece5 piece6";
+        $pieces = explode(" ", $pizza);
+        echo $pieces[0]; // piece1
+        echo $pieces[1]; // piece2
+
+        $continent = $request->input('continent');
         return view('user.user_create');
         User::create('users', function (Blueprint $table) { // schema for table 'users'
             $table->increments('id');                         // add column 'id' that will be AI PK
@@ -72,6 +79,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         return view('user.user_page',compact('user'));
+
     }
 
 

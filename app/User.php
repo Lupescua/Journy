@@ -9,6 +9,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function experiences()
+    {
+        return $this->hasMany('App/Experience');
+    }
+
     protected $table = 'users';
 
     /**
