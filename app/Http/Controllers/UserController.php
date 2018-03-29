@@ -76,6 +76,12 @@ class UserController extends Controller
 
     }
 
+    public function experiences($id)
+    {
+        $user = User::find($id);
+        return view('user.user_page',compact('user'));
+
+    }
 
     /**
      * Show the form for editing the specified resource.

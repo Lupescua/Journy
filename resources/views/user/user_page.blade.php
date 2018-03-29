@@ -86,8 +86,10 @@
                             <label for="inputState">State</label>
                             <select name="adress_state" id="inputState" class="form-control"
                                     placeholder={{$user->adress_state}}>
-                                <option selected>Choose...</option>
-                                <option>...</option>
+                                <option>Timis</option>
+                                <option>Olt</option>
+                                <option>Dolj</option>
+                            </select>
                             </select>
                         </div>
                     </div>
@@ -116,10 +118,9 @@
                             <label class="mr-sm-2" for="inlineFormCustomSelect">Prefered Language</label>
                             <select name="prefered_language" class="custom-select mr-sm-2" id="inlineFormCustomSelect"
                                     placeholder={{$user->prefered_language}}>
-                                <option selected>Choose...</option>
-                                <option value="1">English</option>
-                                <option value="2">French</option>
-                                <option value="3">Czech</option>
+                                <option value="English">English</option>
+                                <option value="French">French</option>
+                                <option value="Czech">Czech</option>
                             </select>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -127,21 +128,25 @@
                             <small id="emailHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.
                             </small>
                             <select name="user_tags" class="selectpicker" multiple placeholder={{$user->user_tags}}>
-                                <optgroup label="Condiments" data-max-options="2">
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
+                                <optgroup label="Historic" data-max-options="2">
+                                    <option value="Trail">Trail</option>
+                                    <option value="Castles">Castles</option>
+                                    <option value="Reenactment">Reenactment</option>
                                 </optgroup>
-                                <optgroup label="Breads" data-max-options="2">
-                                    <option>Plain</option>
-                                    <option>Steamed</option>
-                                    <option>Toasted</option>
+                                <optgroup label="Views" data-max-options="2">
+                                    <option value="Nature">Nature</option>
+                                    <option value="City">City</option>
+                                    <option value="Event">Event</option>
                                 </optgroup>
                             </select>
                         </div>
                     </div>
                     <p>If you want to update your profile, just fill in the new values and click next</p>
-                    <button class="btn btn-primary" type="submit">Next</button>
+                    <div class="row">
+
+                        <button class="btn btn-primary" type="submit">Next</button>
+                        <button class="btn btn-primary" href="">View experiences</button>
+                    </div>
                 </form>
             </section>
         </section>

@@ -36,7 +36,6 @@
                 <div class="col-md-3 mb-3">
                     <label for="inputState">State</label>
                     <select name="adress_state" id="inputState" class="form-control">
-                        <option selected>Choose</option>
                         <option>Timis</option>
                         <option>Olt</option>
                         <option>Dolj</option>
@@ -66,7 +65,6 @@
                 <div class="col-md-6 mb-3">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Prefered Language</label>
                     <select name="prefered_language" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
-                        <option selected>Choose...</option>
                         <option value="English">English</option>
                         <option value="French">French</option>
                         <option value="Czech">Czech</option>
@@ -77,14 +75,14 @@
                     <small id="emailHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.</small>
                     <select name="user_tags" class="selectpicker" multiple >
                         <optgroup label="Historic" data-max-options="2">
-                            <option value="">Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
+                            <option value="Trail">Trail</option>
+                            <option value="Castles">Castles</option>
+                            <option value="Reenactment">Reenactment</option>
                         </optgroup>
                         <optgroup label="Views" data-max-options="2">
-                            <option>Plain</option>
-                            <option>Steamed</option>
-                            <option>Toasted</option>
+                            <option value="Nature">Nature</option>
+                            <option value="City">City</option>
+                            <option value="Event">Event</option>
                         </optgroup>
                     </select>
                 </div>
