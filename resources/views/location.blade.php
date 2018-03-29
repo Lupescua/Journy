@@ -73,7 +73,7 @@
   @foreach($experiences as $experience)
     <div class="col-md-2 img_prop rounded bg-dark ">
       <div class="thumbnail">
-        <a href="" target="_blank">
+        <a href="/experience/{{ $experience->name }} " target="_blank">
           <img src="\img\{{ $experience->image }}" alt="{{ $experience->name }}" style="width:100%">
           <div class="caption">
             <p class="dx">{{ $experience->name }}</p>

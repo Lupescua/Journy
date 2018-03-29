@@ -16,7 +16,6 @@ class LocationController extends Controller
         $region = $request->input('region');
         $activity = $request->input('activity');
         // $filter3 = $request->input('filter3');
-
         if( !isset($continent) ){
             $experiences = Experience::limit(20)->get();
             // $tags = Tag::limit(20)->get();
