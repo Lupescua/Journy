@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Experience;
 use App\User;
 use Illuminate\Http\Request;
+use \Illuminate\Support\Facades\Input as Input;
 
 class UserController extends Controller
 {
@@ -59,7 +60,13 @@ class UserController extends Controller
             if ($request->hasFile('photo')) {
                 $user->photo = $request->photo;
             }
-            $user->save();
+            if(Input::hasFile('photo')){
+                $user->photo = $request->photo;
+                $file = Input::file('photo');
+                $file->move('img', $file->getClientOriginalName());
+            }
+
+                      $user->save();
             //redirect to show page
             return redirect(action('UserController@show',[$user->id]));
         }
