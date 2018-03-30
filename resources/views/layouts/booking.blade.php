@@ -28,7 +28,7 @@ Booking
     @yield('bookingcontent')
 
 
-<button type="submit" class="pull-right">Forward</button>
+
     </div>
     <div class="col-sm-6 col-md-6 details_box">
     <div class="d-flex row">
