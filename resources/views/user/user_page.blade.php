@@ -35,7 +35,7 @@
                 <ul class="slideshow-images column">
                     <li class="media-photo col">
                         <img alt='{{$user->name}}' class="img-responsive"
-                             src="'img/{{$user->id}}/.jpg'"
+                             src="/img/{{$user->photo}}"
                              title='{{$user->name}}'>
                     </li>
                     <li class="media-photo col">
@@ -143,10 +143,10 @@
                             </select>
                         </div>
                     </div>
-                    <p>If you want to update your profile, just fill in the new values and click next</p>
+                    <p>If you want to update your profile, just fill in the new values and click Update</p>
                     <div class="row">
 
-                        <button class="btn btn-primary" type="submit">Next</button>
+                        <button class="btn btn-primary" type="submit"> Update</button>
                         <a class="btn btn-primary" href="{{  action('ExperienceController@index',[$user->id]) }}">Create
                             experiences</a>
 

@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         \App\User::create([
             'name'=>'Jon Snow',
+            'photo'=>'Jon-Snow.jpg',
             'email'=>'usetr@snow.com',
             'password'=>'ygritte',
             'adress_country'=>'Kingdom of the North',

@@ -40,7 +40,7 @@
             <div class="short_desc">
                 <div class="row">
                     <a href="#" class="btn btn-default user_pic" role="button">
-                        <img src="http://www.animationxpress.com/wp-content/uploads/2015/11/Jon-Snow.jpg" alt="John Snow profile picture">
+                        <img src="/img/{{$experience->user->photo}}" alt="John Snow profile picture">
                         <br>{{ $experience->user->name }}</a>
                     <p>Experience Short description</p>
                 </div>
