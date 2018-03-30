@@ -3,15 +3,11 @@
         <h1>File Upload</h1>
 
         {{--How will I tell the store method that these two forms are for the same element--}}
-        <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ action('UserController@store') }}" method="post" enctype="multipart/form-data">
             <label>Select image to upload:</label>
             <input type="file" name="photo" id="file">
-            <input type="submit" value="Upload" name="submit">
-            <input type="hidden" value="{{ csrf_token() }}" name="_token">
-        </form>
-
-        <form method="post" action="{{ action('UserController@store') }}" >
-            {{csrf_field()}}
+            {{--<input type="submit" value="Upload" name="submit">--}}
+        {{csrf_field()}}
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                     <label for="validationDefault01">Name</label>
@@ -29,12 +25,6 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-3">
-
-                    <label>Select image to upload:</label>
-                    <input type="file" name="file" id="file">
-
-                </div>
             </div>
 
 
