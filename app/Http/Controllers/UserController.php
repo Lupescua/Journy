@@ -26,13 +26,6 @@ class UserController extends Controller
     public function create()
     {
 
-        $pizza  = "piece1 piece2 piece3 piece4 piece5 piece6";
-        $pieces = explode(" ", $pizza);
-        echo $pieces[0]; // piece1
-        echo $pieces[1]; // piece2
-
-        $continent = $request->input('continent');
-        return view('user.user_create');
         User::create('users', function (Blueprint $table) { // schema for table 'users'
             $table->increments('id');                         // add column 'id' that will be AI PK
             $table->string('name');                           // create a string column 'name'
@@ -41,6 +34,7 @@ class UserController extends Controller
             $table->rememberToken();                          // add a special remember token column
             $table->timestamps();                             // add common columns 'created_at' and 'updated_at'
         });
+        return view('user.user_create');
     }
     /**
      * Store a newly created resource in storage.
@@ -82,6 +76,11 @@ class UserController extends Controller
 
     }
 
+    public function createExperiences($id)
+    {
+//        ExperienceController@index
+
+    }
 
     /**
      * Show the form for editing the specified resource.
