@@ -41,7 +41,7 @@
                 <div class="row">
                     <a href="#" class="btn btn-default user_pic" role="button">
                         <img src="http://www.animationxpress.com/wp-content/uploads/2015/11/Jon-Snow.jpg" alt="John Snow profile picture">
-                        <br>Jon Snow</a>
+                        <br>{{ $experience->user->name }}</a>
                     <p>Experience Short description</p>
                 </div>
                 @include('experience.elements.one_paragraph_exp_desc')

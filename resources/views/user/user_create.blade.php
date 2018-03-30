@@ -1,26 +1,43 @@
 @extends('layout') @section('title') Journy @endsection @section('content')
     <div class="container">
+        <h1>File Upload</h1>
 
-        <form method="post" action="{{ action('UserController@store') }}">
+        {{--How will I tell the store method that these two forms are for the same element--}}
+        <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
+            <label>Select image to upload:</label>
+            <input type="file" name="file" id="file">
+            <input type="submit" value="Upload" name="submit">
+            <input type="hidden" value="{{ csrf_token() }}" name="_token">
+        </form>
+
+        <form method="post" action="{{ action('UserController@store') }}" >
             {{csrf_field()}}
             <div class="form-row">
-                <div class="col-md-8 mb-3">
+                <div class="col-md-4 mb-3">
                     <label for="validationDefault01">Name</label>
                     <input name="name" type="text" class="form-control" id="validationDefault01"
-                           placeholder="Full Name" value="Mark Zuckerberg" required>
+                    placeholder="Full Name" value="Mark Zuckerberg" required>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="validationDefaultEmail">Email</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            {{--<span class="input-group-text" id="inputGroupPrepend2">@</span>--}}
-                        </div>
+                     </div>
                         <input name="email" type="email" class="form-control" id="validationDefaultEmail"
                                placeholder="Email" aria-describedby="inputGroupPrepend2" value="gmail@chuck.norris"
-                               required >
+                        required >
                     </div>
                 </div>
+
+                <div class="col-md-4 mb-3">
+
+                    <label>Select image to upload:</label>
+                    <input type="file" name="file" id="file">
+
+                </div>
             </div>
+
+
 
             <div class="form-row">
                 <div class="col-md-3 mb-3">

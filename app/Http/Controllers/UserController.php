@@ -76,10 +76,9 @@ class UserController extends Controller
 
     }
 
-    public function experiences($id)
+    public function createExperiences($id)
     {
-        $user = User::find($id);
-        return view('user.user_page',compact('user'));
+//        ExperienceController@index
 
     }
 

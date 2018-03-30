@@ -21,12 +21,15 @@ Route::get('/location', 'LocationController@index') ;
 Route::get('/location_old', 'LocationController@index2') ;
 Route::get('/login', 'LoginController@index')->name('login') ;
 
-Route::get('/new_experience', 'ExperienceController@index') ;
+Route::get('/new_experience/{id?}', 'ExperienceController@index') ;
 Route::post('/new_experience', 'ExperienceController@store') ;
 Route::get('/experience/{name?}', 'ExperienceController@create') ;
 
+//Route::get('/experience/{about_us}', 'ExperienceController@create') ;
+
 Route::get('/booking/{step?}', 'BookingController@index')->name('bookingstep') ;
 
+Route::post('upload', 'UploadController@upload');
 
 Route::get('/new_user', 'UserController@index') ;
 Route::post('/new_user', 'UserController@store') ;

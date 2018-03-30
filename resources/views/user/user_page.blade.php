@@ -57,7 +57,7 @@
                         <div class="col-md-8 mb-3">
                             <label for="validationDefault01">Name</label>
                             <input name="name" type="text" class="form-control" id="validationDefault01"
-                                   placeholder={{$user->name}} required>
+                                   placeholder="{{$user->name}}" value="{{$user->name}}">
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationDefaultEmail">Email</label>
@@ -66,7 +66,8 @@
                                     {{--<span class="input-group-text" id="inputGroupPrepend2">@</span>--}}
                                 </div>
                                 <input name="email" type="email" class="form-control" id="validationDefaultEmail"
-                                       placeholder={{$user->email}} aria-describedby="inputGroupPrepend2" required>
+                                       placeholder="{{$user->email}}" value="{{$user->email}}"
+                                       aria-describedby="inputGroupPrepend2">
                             </div>
                         </div>
                     </div>
@@ -75,17 +76,17 @@
                         <div class="col-md-3 mb-3">
                             <label for="validationDefault05">Country</label>
                             <input name="adress_country" type="text" class="form-control" id="validationDefault05"
-                                   placeholder={{$user->adress_country}} >
+                                   placeholder="{{$user->adress_country}}" value="{{$user->adress_country}}">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationDefault03">City</label>
                             <input name="adress_city" type="text" class="form-control" id="validationDefault03"
-                                   placeholder={{$user->adress_city}} >
+                                   placeholder="{{$user->adress_city}}" value="{{$user->adress_city}}">
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="inputState">State</label>
                             <select name="adress_state" id="inputState" class="form-control"
-                                    placeholder={{$user->adress_state}}>
+                                    placeholder="{{$user->adress_state}}">
                                 <option>Timis</option>
                                 <option>Olt</option>
                                 <option>Dolj</option>
@@ -97,12 +98,12 @@
                         <div class="col-md-9 mb-3">
                             <label for="inputAddress">Home Address</label>
                             <input name="adress_street" type="text" class="form-control" id="validationDefault05"
-                                   placeholder={{$user->adress_street}} >
+                                   placeholder="{{$user->adress_street}}">
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="validationDefault05">Zip</label>
                             <input name="adress_zip" type="text" class="form-control" id="validationDefault05"
-                                   placeholder={{$user->adress_zip}}>
+                                   placeholder="{{$user->adress_zip}}"">
                         </div>
                     </div>
                     <div class="form-group">
@@ -116,8 +117,7 @@
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label class="mr-sm-2" for="inlineFormCustomSelect">Prefered Language</label>
-                            <select name="prefered_language" class="custom-select mr-sm-2" id="inlineFormCustomSelect"
-                                    placeholder={{$user->prefered_language}}>
+                            <select name="prefered_language" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                 <option value="English">English</option>
                                 <option value="French">French</option>
                                 <option value="Czech">Czech</option>
@@ -127,7 +127,7 @@
                             <label class="mr-sm-2" for="inlineFormCustomSelect">Prefered Description</label>
                             <small id="emailHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.
                             </small>
-                            <select name="user_tags" class="selectpicker" multiple placeholder={{$user->user_tags}}>
+                            <select name="user_tags" class="selectpicker" id="inlineFormCustomSelect" multiple>
                                 <optgroup label="Historic" data-max-options="2">
                                     <option value="Trail">Trail</option>
                                     <option value="Castles">Castles</option>
@@ -145,7 +145,9 @@
                     <div class="row">
 
                         <button class="btn btn-primary" type="submit">Next</button>
-                        <button class="btn btn-primary" href="action('UserController@show',[$user->id])">View experiences</button>
+                        <a class="btn btn-primary" href="{{  action('ExperienceController@index',[$user->id]) }}">Create
+                            experiences</a>
+
                     </div>
                 </form>
             </section>

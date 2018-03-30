@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Experience;
 use Illuminate\Http\Request;
+use \Illuminate\Support\Facades\Input as Input;
+use Illuminate\Support\Facades\URL;
 
 class ExperienceController extends Controller
 {
-    public function index()
+    public function index($user_id)
     {
-        return view('experience.experience_create');
+        return view('experience.experience_create', compact('user_id'));
+
     }
 
     public function create($name)
@@ -22,6 +25,7 @@ class ExperienceController extends Controller
 
     public function store(Request $request)
     {
+
         $experience = new Experience();
         $experience->name = $request->name;
         $continent_region = explode(" ", $request->continent_region);
@@ -29,7 +33,7 @@ class ExperienceController extends Controller
         $experience->region_id = $continent_region[1];
         $experience->activity_id = $request->activity_id;
         $experience->image = $request->image;
-        $experience->user_id = 'comes from user page';
+        $experience->user_id = $request->user_id;
         $experience->rating = '3';
         $experience->main_tags = $request->main_tags;
         $experience->people_who_did_it = 'we need an algoritm to calculate it';
@@ -57,4 +61,6 @@ class ExperienceController extends Controller
     {
         return view('experience.experience');
     }
+
+
 }

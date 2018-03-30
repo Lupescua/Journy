@@ -2,6 +2,8 @@
     <div class="container">
         <form method="post" action="{{ action('ExperienceController@store') }}">
             {{csrf_field()}}
+            <input type="hidden" value="{{$user_id}}" name="user_id">
+
             <div class="">
                 <label for="inputName">Name</label>
                 <input name="name" type="text" class="form-control" id="inputName"
