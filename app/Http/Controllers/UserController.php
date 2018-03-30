@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Experience;
 use App\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use \Illuminate\Support\Facades\Input as Input;
+use Illuminate\Validation\Validator;
 
 class UserController extends Controller
 {
@@ -14,10 +17,35 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+    }
+
+    //display the registration form
+    public function step1(Request $request)
+    {
+            return view('auth.register');
+    }
+
+    public function step1store(Request $request)
+    {
+        $request = request();
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+        return redirect()->action('UserController@step2')->withInput()->with('step','2');
+    }
+
+
+    public function step2(Request $request)
+    {
+
         return view('user.user_create');
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -35,6 +63,8 @@ class UserController extends Controller
             $table->rememberToken();                          // add a special remember token column
             $table->timestamps();                             // add common columns 'created_at' and 'updated_at'
         });
+
+
         return view('user.user_create');
     }
     /**
@@ -45,10 +75,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+
         if($request->agree_to_terms != true){
             $user =  new User();
             $user->name = $request->name;
-            $user->password = 'set_from_controller';
+            $user->password = $request->pass;
             $user->email = $request->email;
             $user->adress_country = $request->adress_country;
             $user->adress_city = $request->adress_city;
@@ -57,16 +88,16 @@ class UserController extends Controller
             $user->adress_zip = $request->adress_zip;
             $user->prefered_language = $request->prefered_language;
             $user->user_tags = $request->user_tags;
-            if ($request->hasFile('photo')) {
-                $user->photo = $request->photo;
-            }
             if(Input::hasFile('photo')){
-                $user->photo = $request->photo;
                 $file = Input::file('photo');
+                $user->photo = $file->getClientOriginalName();
                 $file->move('img', $file->getClientOriginalName());
             }
+            $user->save();
 
-                      $user->save();
+            event(new Registered($user));
+            Auth::guard()->login($user);
+
             //redirect to show page
             return redirect(action('UserController@show',[$user->id]));
         }

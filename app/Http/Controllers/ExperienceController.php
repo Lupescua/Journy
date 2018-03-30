@@ -52,6 +52,11 @@ class ExperienceController extends Controller
         $experience->where_we_be = $request->where_we_be;
         $experience->gps_lng = $request->gps_lng;
         $experience->gps_lat = $request->gps_lat;
+        if(Input::hasFile('image')){
+            $experience->image = $request->image;
+            $file = Input::file('image');
+            $file->move('img', $file->getClientOriginalName());
+        }
         $experience->save();
         return view('experience.experience', compact('experience'));
 

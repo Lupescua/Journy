@@ -14,7 +14,7 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Auth::routes();
+//Auth::routes();
 
 Route::get('/', 'HomepageController@index')  ;
 Route::get('/location', 'LocationController@index') ;
@@ -31,17 +31,17 @@ Route::get('/booking/{step?}', 'BookingController@index')->name('bookingstep') ;
 
 Route::post('upload', 'UploadController@upload');
 
-Route::get('/new_user', 'UserController@index') ;
+Route::get('/register', 'UserController@step1')->name('register');
+Route::post('/register', 'UserController@step1store');
+Route::get('/new_user', 'UserController@step2') ;
 Route::post('/new_user', 'UserController@store') ;
 
 Route::get('/new_user/{id}', 'UserController@show') ;
 
-Auth::routes();
 
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 Route::get('/callback', 'SocialAuthFacebookController@callback');
 Route::get('/modal', 'ModalController@index');
-Route::get('/register', 'RegisterController@index')->name('register');
 
 Route::get('/privacy_policy', function () {
     return view('user.privacy_policy');

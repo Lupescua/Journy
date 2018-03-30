@@ -24,6 +24,9 @@
             <h1>Hey {{$user->name}},</h1>
             <h2> Is this you? If yes, just click next</h2></div>
         <hr>
+
+        <form action="{{ action('UserController@store') }}" method="post" enctype="multipart/form-data">
+            {{csrf_field()}}
         {{--THE PHOTO--}}
         <section class="d-flex">
             <section class="col-sm-3 col-md-3 ">
@@ -32,15 +35,14 @@
                 <ul class="slideshow-images column">
                     <li class="media-photo col">
                         <img alt='{{$user->name}}' class="img-responsive"
-                             src="https://a0.muscache.com/im/users/30582800/profile_pic/1428153696/original.jpg?aki_policy=profile_x_medium"
+                             src="'img/{{$user->id}}/.jpg'"
                              title='{{$user->name}}'>
                     </li>
                     <li class="media-photo col">
 
                         <div class="input-group mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                <label class="custom-file-label" for="inputGroupFile02">Choose picture</label>
+                                <input type="file" name="photo" id="photo">
                             </div>
                         </div>
 

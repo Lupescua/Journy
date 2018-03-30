@@ -1,7 +1,9 @@
 @extends('layout') @section('title') Journy @endsection @section('content')
     <div class="container">
-        <form method="post" action="{{ action('ExperienceController@store') }}">
+        <form method="post" action="{{ action('ExperienceController@store') }}" enctype="multipart/form-data">
             {{csrf_field()}}
+            <label>Select experience image:</label>
+            <input type="file" name="image" id="file">
             <input type="hidden" value="{{$user_id}}" name="user_id">
 
             <div class="">
@@ -13,23 +15,24 @@
 
                 <div class="col-md-3 mb-3">
                     <label for="inputContinent_region">Region</label>
-                <select name="continent_region" class="selectpicker form-control" id="inputContinent_region" required>
-                    <optgroup label="Asia">
-                        <option value="1 1">East</option>
-                        <option value="1 2">West</option>
-                        <option value="1 3">Central</option>
-                    </optgroup>
-                    <optgroup label="Europe">
-                        <option value="2 1">Eastern</option>
-                        <option value="2 2">Western</option>
-                    </optgroup>
-                    <optgroup label="America">
-                        <option value="3 1">North</option>
-                    </optgroup>
-                    <optgroup label="Africa">
-                        <option value="4 1">South</option>
-                    </optgroup>
-                </select>
+                    <select name="continent_region" class="selectpicker form-control" id="inputContinent_region"
+                            required>
+                        <optgroup label="Asia">
+                            <option value="1 1">East</option>
+                            <option value="1 2">West</option>
+                            <option value="1 3">Central</option>
+                        </optgroup>
+                        <optgroup label="Europe">
+                            <option value="2 1">Eastern</option>
+                            <option value="2 2">Western</option>
+                        </optgroup>
+                        <optgroup label="America">
+                            <option value="3 1">North</option>
+                        </optgroup>
+                        <optgroup label="Africa">
+                            <option value="4 1">South</option>
+                        </optgroup>
+                    </select>
                 </div>
 
                 <div class="col-md-3 mb-3">
@@ -51,12 +54,12 @@
             <div class="">
                 <label for="inputPlace">Adress</label>
                 <input name="place" type="text" class="form-control" id="inputPlace"
-                       placeholder="Krakovska 1" value="Krakovska 1"  >
+                       placeholder="Krakovska 1" value="Krakovska 1">
             </div>
 
             <div class="form-row">
                 <div class="col-md-4 mb-3">
-                    <label >Upload experience picture</label>
+                    <label>Upload experience picture</label>
                     <div class="custom-file">
                         <label class="custom-file-label" for="inputImage">Choose file</label>
                         <input name="image" type="file" class="custom-file-input" id="inputImage">
@@ -70,41 +73,42 @@
             </div>
 
             <div class="form-row">
-            <div class="form-group col-md-8 mb-6">
-                <label for="inputDescription">Short Experience Description</label>
-                <textarea name="description" class="form-control" id="inputDescription"rows="3" required></textarea>
-            </div>
-            <div class="col-md-4 mb-3">
-                {{--<label class="mr-sm-2" for="inlineFormCustomSelect">Main Tags</label>--}}
-                <small id="tagHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.</small>
-                <select name="user_tags" class="selectpicker" multiple >
-                    <optgroup label="Tags" data-max-options="3">
-                        <option>Dragon</option>
-                        <option>Ice</option>
-                        <option>Fire</option>
-                        <option>Hike</option>
-                        <option>Adrenaline</option>
-                        <option>Social</option>
-                        <option>Cooking</option>
-                        <option>Motor</option>
-                        <option>Water</option>
-                        <option>Historic</option>
-                        <option>Tour</option>
-                        <option>Soft Skills</option>
-                    </optgroup>
-                </select>
-            </div>
+                <div class="form-group col-md-8 mb-6">
+                    <label for="inputDescription">Short Experience Description</label>
+                    <textarea name="description" class="form-control" id="inputDescription" rows="3"
+                              required></textarea>
+                </div>
+                <div class="col-md-4 mb-3">
+                    {{--<label class="mr-sm-2" for="inlineFormCustomSelect">Main Tags</label>--}}
+                    <small id="tagHelp" class="form-text text-muted">Press Ctrl/Cmd to select multiple.</small>
+                    <select name="user_tags" class="selectpicker" multiple>
+                        <optgroup label="Tags" data-max-options="3">
+                            <option>Dragon</option>
+                            <option>Ice</option>
+                            <option>Fire</option>
+                            <option>Hike</option>
+                            <option>Adrenaline</option>
+                            <option>Social</option>
+                            <option>Cooking</option>
+                            <option>Motor</option>
+                            <option>Water</option>
+                            <option>Historic</option>
+                            <option>Tour</option>
+                            <option>Soft Skills</option>
+                        </optgroup>
+                    </select>
+                </div>
 
             </div>
             <div class="form-row">
                 <div class="col-md-3 mb-3">
                     <label for="inputPrice">Price</label>
                     <input name="price" type="text" class="form-control" id="inputPrice"
-                           placeholder="22.00" >
+                           placeholder="22.00">
                 </div>
                 <div class="col-md-3 mb-3">
                     <label class="mr-sm-2" for="inputCurrency">Currency</label>
-                    <select name="currency" class="custom-select mr-sm-2" id="inputCurrency" >
+                    <select name="currency" class="custom-select mr-sm-2" id="inputCurrency">
                         <option value="EUR">EUR</option>
                         <option value="USD">USD</option>
                         <option value="CZK">CZK</option>
@@ -115,7 +119,7 @@
             <div class="form-row">
                 <div class="col-md-6 mb-3">
                     <label class="mr-sm-2" for="inputLanguage">Language</label>
-                    <select name="prefered_language" class="custom-select mr-sm-2" id="inputLanguage" >
+                    <select name="prefered_language" class="custom-select mr-sm-2" id="inputLanguage">
                         <option value="English">English</option>
                         <option value="French">French</option>
                         <option value="Czech">Czech</option>
@@ -124,7 +128,7 @@
                 <div class="col-md-6 mb-3">
                     <label for="inputMax_participants">Maximum number of participants</label>
                     <input name="max_participants" type="text" class="form-control" id="inputMax_participants"
-                           placeholder="22.00" >
+                           placeholder="22.00">
                 </div>
             </div>
 
@@ -132,16 +136,16 @@
                 <div class="col-md-3 mb-3">
                     <label for="inputDuration">Duration</label>
                     <input name="duration" type="text" class="form-control" id="inputDuration"
-                           placeholder="3.5 hours" >
+                           placeholder="3.5 hours">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="inputOffered">Offered</label>
                     <input name="offered" type="text" class="form-control" id="inputOffered"
-                           placeholder="1 meal, Drinks and Equipment" >
+                           placeholder="1 meal, Drinks and Equipment">
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="inputSport_level">Sport Level</label>
-                    <select name="sport_level" class="custom-select mr-sm-2" id="inputSport_level" >
+                    <select name="sport_level" class="custom-select mr-sm-2" id="inputSport_level">
                         <option value="1">Easy</option>
                         <option value="2">Medium</option>
                         <option value="3">Advanced</option>
@@ -161,7 +165,8 @@
                 </div>
                 <div class="form-group col-md-6 mb-6">
                     <label for="exampleWhat_we_provide">What will the guest gain</label>
-                    <textarea name="what_we_provide" class="form-control" id="exampleWhat_we_provide" rows="3"></textarea>
+                    <textarea name="what_we_provide" class="form-control" id="exampleWhat_we_provide"
+                              rows="3"></textarea>
                 </div>
             </div>
             <div class="form-row">
@@ -181,17 +186,18 @@
                 <div class="col-md-6 mb-6">
                     <label for="inputLongitude">Longitude</label>
                     <input name="gps_lng" type="text" class="form-control" id="inputLongitude"
-                           placeholder="14.431" >
+                           placeholder="14.431">
                 </div>
 
                 <div class="col-md-6 mb-6">
                     <label for="inputLatitude">Latitude</label>
                     <input name="gps_lat" type="text" class="form-control" id="inputLatitude"
-                           placeholder="50.0745" >
+                           placeholder="50.0745">
                 </div>
 
-            </div>.
-            <button class="btn btn-primary" type="submit" >Submit</button>
+            </div>
+            .
+            <button class="btn btn-primary" type="submit">Submit</button>
         </form>
     </div>
 @endsection
