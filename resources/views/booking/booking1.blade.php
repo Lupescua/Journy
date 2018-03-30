@@ -50,7 +50,7 @@ Booking & Contact
     </div>
   </div>
 </form>
-
+<a href="{{route('bookingstep',[2])}}"><button type="submit" class="pull-right">Forward</button></a>
 
 <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
 @endsection
