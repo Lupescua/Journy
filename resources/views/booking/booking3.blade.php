@@ -42,7 +42,7 @@ on <= small devices and 4/12 page width on >= medium devices -->
 
 
                 </form>
-
+                <a href="/new_user"><button type="submit" class="pull-right">Submit</button></a>
                 <!-- <hr>
     <form role="form" id="payment-form">
                         <div class="form-group row">

@@ -36,5 +36,5 @@ Booking & Contact
 
   </div>
 </form>
-
+<a href="{{route('bookingstep',[3])}}"><button type="submit" class="pull-right">Forward</button></a>
 @endsection

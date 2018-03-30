@@ -11,7 +11,7 @@ Review Guest Requirements
 
     <p> Guest ages 18 and up can attend. Parents may also bring children under 2 years old for free charges. If you bring a guest
       that's under 18 it is your responsability to make sure the activities they participate in are age-appropriate.</p>
-
+      <a href="{{route('bookingstep',[1])}}"><button type="submit" class="pull-right">Forward</button></a>
 @endsection
 
 
