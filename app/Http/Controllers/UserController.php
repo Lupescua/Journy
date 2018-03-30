@@ -56,6 +56,9 @@ class UserController extends Controller
             $user->adress_zip = $request->adress_zip;
             $user->prefered_language = $request->prefered_language;
             $user->user_tags = $request->user_tags;
+            if ($request->hasFile('photo')) {
+                $user->photo = $request->photo;
+            }
             $user->save();
             //redirect to show page
             return redirect(action('UserController@show',[$user->id]));

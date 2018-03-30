@@ -5,7 +5,7 @@
         {{--How will I tell the store method that these two forms are for the same element--}}
         <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
             <label>Select image to upload:</label>
-            <input type="file" name="file" id="file">
+            <input type="file" name="photo" id="file">
             <input type="submit" value="Upload" name="submit">
             <input type="hidden" value="{{ csrf_token() }}" name="_token">
         </form>
